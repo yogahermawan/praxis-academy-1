@@ -1,11 +1,8 @@
-import 'package:kasus/kasus.dart';
 import 'package:kasus/kasus.dart' as kasus;
 import 'package:kasus/testlib.dart' as testlib;
 import 'lib.dart' as libr;
 
-main() {
-  var awesome = Awesome();
-  print('awesome: ${awesome.isAwesome}');
+main(List<String> arguments) {
   print('Hello: ${kasus.calculate()}!');
   var textdata = kasus.textdata();
   print(textdata);

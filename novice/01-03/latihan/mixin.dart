@@ -1,22 +1,24 @@
-mixin Musical {
-  bool canPlayPiano = true;
-  bool canCompose = false;
-  bool canConduct = false;
-  
-  void entertainMe() {
-    if (canPlayPiano) {
-      print('Playing piano');
-    } else if (canConduct) {
-      print('Waving hands');
-    } else {
-      print('Humming to self');
-    }
+abstract class Super {
+  void method() {
+    print("Super");
   }
 }
-class Musician with Musical {
-  var b = Musical;
+
+class MySuper implements Super {
+  void method() {
+    print("MySuper");
+  }
 }
-main(){
-  var c = Musician();
-  print(c);
+
+mixin Mixin on Super {
+  void method() {
+    super.method();
+    print("Sub");
+  }
+}
+
+class Client extends MySuper with Mixin {}
+
+void main() {
+  Client().method();
 }

@@ -1,11 +1,12 @@
-<div style="text-align: justify">Teknologi Informasi adalah suatu teknologi yang membantu manusia dalam menyampaikan informasi secara efektif dan efisien. 
+Teknologi Informasi adalah suatu teknologi yang membantu manusia dalam menyampaikan informasi secara efektif dan efisien. 
 Ilmu komputer merupakan ilmu yang memahami desain dan penggunaan komputer. 
-Sedangkan informatika adalah bidang atau ilmu yang berkaitan dengan interaksi antara manusia dan informasi.</div>
-<div style="text-align: justify">Pengembangan perangkat lunak bertujuan menyukseskan proyek pengembangan sistem sesuai tujuan. 
+Sedangkan informatika adalah bidang atau ilmu yang berkaitan dengan interaksi antara manusia dan informasi.\
+Pengembangan perangkat lunak bertujuan menyukseskan proyek pengembangan sistem sesuai tujuan. 
 Rekayasa perangkat lunak adalah bidang atau ilmu yang mendalami cara-cara pengembangan perangkat lunak dalam membuat, memelihara hingga memanajemennya. 
-Acuan rekayasa perangkat lunak yaitu *maintainability, dependability, effectiveness and efficiency, robust, usability*.</div>
-<span style="color:red;">
+Acuan rekayasa perangkat lunak yaitu *maintainability, dependability, effectiveness and efficiency, robust, usability*.\
+<center>
 *Agile Software Development* merupakan metode pengembangan perangkat lunak yang terdiri dari perencanaan, implementasi, pengujian, dokumentasi, penyebaran, pemeliharaan. 
 Agile selalu berinteraksi dengan klien dan merespon perubahan untuk mengembangkan perangkat lunak yang lebih baik.
 *Scrum* merupakan *framework activity agile* yang terdiri dari *requirements, analysis, design, evolution, delivery*. Pola proses scrum yaitu *backlog, sprint, scrum meeting, demos*.
 *Extreme Programming* merupakan metode pengembangan perangkat lunak dari pendekatan *agile* berdasarkan *communication, simplicity, feedback, courage, respect*. Proses XP terdiri dari *planning, design, coding, testing*.
+</center>

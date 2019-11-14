@@ -1,1 +1,2 @@
-https://github.com/Fourthten/rhymes.git
+__This repo__\
+[My Repo rhymes](https://github.com/Fourthten/rhymes.git)

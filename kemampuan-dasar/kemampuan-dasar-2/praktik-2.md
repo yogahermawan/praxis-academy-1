@@ -1,5 +1,5 @@
-
-
+### Clone git
+```
 $ git clone git@github.com:Fourthten/rhymes.git rhymes
 Cloning into 'rhymes'...
 remote: Enumerating objects: 26, done.
@@ -9,10 +9,14 @@ remote: Total 26 (delta 7), reused 23 (delta 4), pack-reused 0
 Receiving objects: 100% (26/26), done.
 Resolving deltas: 100% (7/7), done.
 $ cd rhymes
-
+```
+### Change branch
+```
 $ git checkout -b readme
 Switched to a new branch 'readme'
-
+```
+### Add, commit branch
+```
 $ git add .
 $ git commit -m "information added in readme"
 [new 3accfb6] information added in readme
@@ -21,13 +25,18 @@ $ git commit -m "information added in readme"
 $ git checkout master
 Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
-
+```
+### Check branch, remote
+```
 $ git branch
 * master
   readme
 $ git remote -v
 origin  git@github.com:Fourthten/rhymes.git (fetch)
 origin  git@github.com:Fourthten/rhymes.git (push)
+```
+### Push branch
+```
 $ git push origin readme
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
@@ -57,10 +66,15 @@ Total 3 (delta 1), reused 0 (delta 0)
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To github.com:Fourthten/rhymes.git
    43582f1..3b64f49  master -> master
-
+```
+### Organization 
 ![Organization](https://github.com/Fourthten/rhymes/blob/master/images/organization.png)
+### Fork 
 ![Fork](https://github.com/Fourthten/rhymes/blob/master/images/fork.png)
+### Issue 
 ![Issue](https://github.com/Fourthten/rhymes/blob/master/images/issue.png)
+### Team 
 ![Team](https://github.com/Fourthten/rhymes/blob/master/images/team.png)
-![Collabortors](https://github.com/Fourthten/rhymes/blob/master/images/collaborators.png)
+### Collaborators 
+![Collaborators](https://github.com/Fourthten/rhymes/blob/master/images/collaborators.png)
 

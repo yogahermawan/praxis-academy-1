@@ -1,24 +1,33 @@
 ### Create a folder for your project.
+```
 D:\>mkdir rhymes
 D:\>cd rhymes
+```
 
 ### To make this directory and empty Git repo do this:
+```
 D:\rhymes>git init
 Initialized empty Git repository in D:/rhymes/.git/
+```
 
 ### I usually create an empty README.txt file for the first commit in my project
-### history. 
+### history.
+```
 D:\rhymes>type NUL > README.txt
 D:\rhymes>git add README.txt
 D:\rhymes>git commit -m "First commit."
 [master (root-commit) 2b6165d] First commit.
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 README.txt
+```
  
 ### Add some explanation about the project to the README file.
+```
 D:\rhymes>echo 'This repo is a collection of my favorite nursery rhymes.' >> README.txt
+```
 
 ### Review uncommitted changes. Then commit them.
+```
 D:\rhymes>git status
 On branch master
 Changes not staged for commit:
@@ -37,8 +46,10 @@ D:\rhymes>git add README.txt
 D:\rhymes>git commit -m "Added project overview to README.txt"
 [master a077c1f] Added project overview to README.txt
  1 file changed, 1 insertion(+)
+```
 
 ### Alice downloads favorite rhymes.
+```
 D:\rhymes>wget https://www.acquia.com/sites/default/files/blog/all-around-the-mulberry-bush.txt
 --2019-11-09 02:56:06--  https://www.acquia.com/sites/default/files/blog/all-around-the-mulberry-bush.txt
 Resolving www.acquia.com (www.acquia.com)... 104.16.118.45, 104.16.117.45
@@ -69,10 +80,12 @@ Resolving www.acquia.com (www.acquia.com)... 104.16.117.45, 104.16.118.45
 Connecting to www.acquia.com (www.acquia.com)|104.16.117.45|:443... connected.
 HTTP request sent, awaiting response... 404 Not Found
 2019-11-09 03:01:16 ERROR 404: Not Found.
+```
 
 ### The files have been downloaded, but not committed.
 ### You can see this with git status. git status
 ### Alice adds the files one-by-one to make her git history look nice and tidy.
+```
 D:\rhymes>git add all-around-the-mulberry-bush.txt
 D:\rhymes>git status
 On branch master
@@ -94,8 +107,10 @@ D:\rhymes>git commit -m "Added jack-and-jill.txt."
 [detached HEAD 8d28c49] Added jack-and-jill.txt.
  1 file changed, 12 insertions(+)
  create mode 100644 jack-and-jill.txt
+```
 
 ### Alice gets lazy and decides to just add everything else at once.
+```
 D:\rhymes>git add .
 D:\rhymes>git commit -m "Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt"
 [detached HEAD 663e6ac] Added old-mother-hubbard.txt, twinkle-twinkle.txt, hokey-pokey.txt
@@ -103,8 +118,10 @@ D:\rhymes>git commit -m "Added old-mother-hubbard.txt, twinkle-twinkle.txt, hoke
  create mode 100644 hokey-pokey.txt
  create mode 100644 old-mother-hubbard.txt
  create mode 100644 twinkle-twinkle.txt
+```
 
 ### Alice reviews and admires her commit history.
+```
 D:\rhymes>git log
 commit 663e6acfffb0c494c21c7e5b1ce44560f1d16bec (HEAD)
 Author: fourthten <agung0410@gmail.com>
@@ -430,7 +447,6 @@ First commit.
 diff --git a/README.txt b/README.txt
 new file mode 100644
 index 0000000..e69de29
-
 D:\rhymes>git remote add origin https://github.com/Fourthten/rhymes.git
 D:\rhymes>git push -u origin master
 Enumerating objects: 10, done.
@@ -442,9 +458,11 @@ Total 10 (delta 0), reused 0 (delta 0)
 To https://github.com/Fourthten/rhymes.git
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
+```
 
 ### First Bob clones his fork of Alice's rhymes project.
 ### (If you're following along, replace bryanhirsch below with your own GitHub username.)
+```
 D:\>git clone https://github.com/Fourthten/rhymes.git
 Cloning into 'rhymes'...
 remote: Enumerating objects: 23, done.
@@ -453,13 +471,17 @@ remote: Compressing objects: 100% (17/17), done.
 remote: Total 23 (delta 6), reused 20 (delta 3), pack-reused 0
 Unpacking objects: 100% (23/23), done.
 D:\>cd rhymes
+```
 
 ### To keep things simple and tidy, Bob will keep the master branch in sync with Alice's version of the master branch.
 ### Bob creates a new branch, where he will store his changes.
+```
 D:\rhymes>git checkout -b hickory-dickory
 Switched to a new branch 'hickory-dickory'
+```
 
 ### Add Hickory Dickory Dock to the repo.
+```
 D:\rhymes>wget https://www.acquia.com/sites/default/files/blog/hickory-dickory-dock.txt
 --2019-11-09 04:10:20--  https://www.acquia.com/sites/default/files/blog/hickory-dickory-dock.txt
 Resolving www.acquia.com (www.acquia.com)... 104.16.117.45, 104.16.118.45
@@ -471,8 +493,7 @@ D:\rhymes>git commit -m "Added hickory-dickory-dock.txt."
 [hickory-dickory d3b469c] Added hickory-dickory-dock.txt.
  1 file changed, 53 insertions(+)
  create mode 100644 hickory-dickory-dock.txt
-
-###D:\rhymes>git push origin hickory-dickory
+D:\rhymes>git push origin hickory-dickory
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 4 threads
@@ -486,33 +507,45 @@ remote:      https://github.com/Fourthten/rhymes/pull/new/hickory-dickory
 remote:
 To https://github.com/Fourthten/rhymes.git
  * [new branch]      hickory-dickory -> hickory-dickory
+```
 
 ### Alice renames origin -> alice.
+```
 D:\>cd rhymes
 D:\rhymes>git remote rename origin alice
+```
 
 ### Add a remote pointing to Bob's copy of the project.
+```
 D:\rhymes>git remote add bob https://github.com/Fourthten/rhymes.git
+```
 
 ### Review remotes.
+```
 D:\rhymes>git remote
 alice
 bob
+```
 
 ### Confirm each remote points to the correct repository.
+```
 D:\rhymes>git remote -v
 alice   https://github.com/Fourthten/rhymes.git (fetch)
 alice   https://github.com/Fourthten/rhymes.git (push)
 bob     https://github.com/Fourthten/rhymes.git (fetch)
 bob     https://github.com/Fourthten/rhymes.git (push)
+```
 
 ### Fetch a copy of Bob's work.
+```
 D:\rhymes>git fetch bob
 From https://github.com/Fourthten/rhymes
  * [new branch]      hickory-dickory -> bob/hickory-dickory
  * [new branch]      master          -> bob/master
+```
 
 ### Review all the branches (both local and remote).
+```
 D:\rhymes>git branch -a
 * hickory-dickory
   master
@@ -521,11 +554,12 @@ D:\rhymes>git branch -a
   remotes/alice/master
   remotes/bob/hickory-dickory
   remotes/bob/master
+```
 
 ### Check out a local copy of Bob's work and review it.
+```
 D:\rhymes>git checkout -b bob/hickory-dickory
 Switched to a new branch 'bob/hickory-dickory'
-
 D:\rhymes>git diff master hickory-dickory
 diff --git a/hickory-dickory-dock.txt b/hickory-dickory-dock.txt
 new file mode 100644
@@ -587,7 +621,6 @@ index 0000000..1be6828
 +I have to go!
 +Hickory Dickory dock."
 \ No newline at end of file
-
 D:\rhymes>git log -1 -p
 commit 870fa702b4e2a86f5a7f377eaab0efc722c2a25a (HEAD -> bob/hickory-dickory, bob/master, alice/master, alice/HEAD, master)
 Author: fourthten <agung0410@gmail.com>
@@ -640,44 +673,54 @@ index 812f702..0000000
 -Date:   Fri Nov 8 13:58:52 2019 +0700
 -
 -    First commit.
+```
 
 ### Checkout master and merge Bobs changes in.
+```
 D:\rhymes>git checkout master
 Switched to branch 'master'
 Your branch is up to date with 'alice/master'.
-
 D:\rhymes>git merge hickory-dickory
 Updating 870fa70..d3b469c
 Fast-forward
  hickory-dickory-dock.txt | 53 ++++++++++++++++++++++++++++++++++++++++++++++++
  1 file changed, 53 insertions(+)
  create mode 100644 hickory-dickory-dock.txt
+```
 
 ### Push changes up to GitHub git push alice master
 ### Remove our local copy of the hickory-dickory branch. We don't need it anymore.
+```
 D:\rhymes>git branch -D hickory-dickory
 Deleted branch hickory-dickory (was d3b469c).
-
 D:\>cd rhymes
 D:\rhymes>git remote rename origin bob
+```
 
 ### Add a remote pointing to Alice's copy of the project.
+```
 D:\rhymes>git remote add alice https://github.com/Fourthten/rhymes.git
+```
 
 ### Review remotes.
+```
 D:\rhymes>git remote
 alice
 bob
+```
 
 ### Confirm each remote points to the correct repository. 
+```
 D:\rhymes>git remote -v
 alice   https://github.com/Fourthten/rhymes.git (fetch)
 alice   https://github.com/Fourthten/rhymes.git (push)
 bob     https://github.com/Fourthten/rhymes.git (fetch)
 bob     https://github.com/Fourthten/rhymes.git (push)
+```
 
 ### Update master branch. 
 ### (As an alternative to fetch, use `remote update` to update all your remotes.)
+```
 D:\rhymes>git remote update
 Fetching alice
 Fetching bob
@@ -687,9 +730,11 @@ Your branch is ahead of 'alice/master' by 1 commit.
   (use "git push" to publish your local commits)
 D:\rhymes>git merge alice/master
 Already up to date.
+```
 
 ### To confirm you did everything right check the difference between your local copy of master 
 ### and Alice's master branch. There should be no difference. 
+```
 D:\rhymes>git diff alice/master
 diff --git a/hickory-dickory-dock.txt b/hickory-dickory-dock.txt
 new file mode 100644
@@ -751,16 +796,16 @@ index 0000000..1be6828
 +I have to go!
 +Hickory Dickory dock."
 \ No newline at end of file 
+```
 
 ### Push to GitHub 
+```
 D:\rhymes>git push bob master
 Total 0 (delta 0), reused 0 (delta 0)
 To https://github.com/Fourthten/rhymes.git
    870fa70..d3b469c  master -> master
-
 D:\rhymes>git checkout -b bobs-changes
 Switched to a new branch 'bobs-changes'
-
 D:\rhymes>wget https://www.acquia.com/sites/default/files/blog/jack-be-nimble.txt
 --2019-11-09 04:31:10--  https://www.acquia.com/sites/default/files/blog/jack-be-nimble.txt
 Resolving www.acquia.com (www.acquia.com)... 104.16.118.45, 104.16.117.45
@@ -783,24 +828,23 @@ D:\rhymes>git commit -m "Added mother-goose.txt."
 [bobs-changes 2ab295b] Added mother-goose.txt.
  1 file changed, 29 insertions(+)
  create mode 100644 mother-goose.txt
-
 D:\rhymes>git commit -am "Updated README.txt."
 [bobs-changes 1fc126c] Updated README.txt.
  1 file changed, 1 insertion(+), 1 deletion(-)
+```
 
 ### Review changes word-by-word. Commit.
+```
 D:\rhymes>git diff --word-diff
 D:\rhymes>git commit -am "Fixed typo in README.txt."
 On branch bobs-changes
 nothing to commit, working tree clean
-
 D:\rhymes>git commit -am "Updated README.txt."
 [bobs-changes e5ff71b] Updated README.txt.
  1 file changed, 1 insertion(+), 1 deletion(-)
 D:\rhymes>git commit -am "Updated README.txt."
 [bobs-changes 199ae9b] Updated README.txt.
  1 file changed, 1 insertion(+), 1 deletion(-)
-
 D:\rhymes>wget https://www.acquia.com/sites/default/files/blog/old-king-cole.txt
 --2019-11-09 04:41:12--  https://www.acquia.com/sites/default/files/blog/old-king-cole.txt
 Resolving www.acquia.com (www.acquia.com)... 104.16.117.45, 104.16.118.45
@@ -822,11 +866,9 @@ D:\rhymes>git add twinkle-twinkle.txt
 D:\rhymes>git commit -m "Added twinkle-twinkle.txt."
 On branch bobs-changes
 nothing to commit, working tree clean
-
 D:\rhymes>git commit -am "Updated README.txt."
 [bobs-changes fcfd75b] Updated README.txt.
  1 file changed, 1 insertion(+), 1 deletion(-)
-
 D:\rhymes>git log
 commit fcfd75b9c5a7357487b383518e0901bbc5da5c99 (HEAD -> bobs-changes)
 Author: fourthten <agung0410@gmail.com>
@@ -914,7 +956,6 @@ d4a9e08 Added all-around-the-mulberry-bush.txt.
 8304723 Added jack-and-jill.txt.
 a077c1f Added project overview to README.txt
 2b6165d First commit.
-
 D:\rhymes>git log --oneline
 fcfd75b (HEAD -> bobs-changes) Updated README.txt.
 cda0b03 Added old-king-cole.txt.
@@ -933,8 +974,10 @@ d4a9e08 Added all-around-the-mulberry-bush.txt.
 8304723 Added jack-and-jill.txt.
 a077c1f Added project overview to README.txt
 2b6165d First commit.
+```
 
 ### Rewrite history going back as far as commit 4b15370.
+```
 git rebase -i 4b15370
 pick 49d37c1 Added jack-be-nimble.txt.
 pick 2ab295b Added mother-goose.txt.
@@ -943,7 +986,6 @@ pick e5ff71b Updated README.txt.
 pick 199ae9b Updated README.txt.
 pick cda0b03 Added old-king-cole.txt.
 pick fcfd75b Updated README.txt.
-
 # Rebase d3b469c..fcfd75b onto e5ff71b (7 commands)
 #
 # Commands:
@@ -963,7 +1005,6 @@ pick fcfd75b Updated README.txt.
 # .       specified). Use -c <commit> to reword the commit message.
 #
 # These lines can be re-ordered; they are executed from top to bottom.
-
 pick 49d37c1 Added jack-be-nimble.txt.
 pick 2ab295b Added mother-goose.txt.
 pick 1fc126c Updated README.txt.
@@ -971,7 +1012,6 @@ squash e5ff71b Updated README.txt.
 squash 199ae9b Updated README.txt.
 pick cda0b03 Added old-king-cole.txt.
 squash fcfd75b Updated README.txt.
-
 D:\rhymes>git log --oneline
 935d17e (HEAD -> bobs-changes) Added old-king-cole.txt.
 296990c Updated README.txt.
@@ -987,3 +1027,4 @@ d4a9e08 Added all-around-the-mulberry-bush.txt.
 8304723 Added jack-and-jill.txt.
 a077c1f Added project overview to README.txt
 2b6165d First commit.
+```

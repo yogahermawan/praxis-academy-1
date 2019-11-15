@@ -22,7 +22,7 @@ void main() async {
   if(await file.exists()){
     //read file
     contents = await file.readAsString();
-    print(contents);
+    // print(contents);
 
     //write file
     var fileCopy = await File('get-copy.txt').writeAsString(contents);

@@ -4,15 +4,16 @@ import 'dart:convert';
 
 // get content from endpoint
 Future<void> printUser() async {
+  String x = "";
   var request = 
     await HttpClient().getUrl(Uri.parse('https://jsonplaceholder.typicode.com/users'));
   var response = await request.close();
   // transforms and prints the response
   await for (var contents in response.transform(Utf8Decoder())) {
-    // print(contents);
-    var file = await File('get.txt').writeAsString(contents);
-    print('Create file');
+    x = x+contents;
   }
+  var files = await File('get.txt').writeAsString(x);
+  print("Create file");
 }
 
 void main() async {

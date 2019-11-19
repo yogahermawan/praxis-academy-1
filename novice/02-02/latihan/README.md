@@ -15,6 +15,7 @@ void main() {
   );
 }
 ```
+![HelloWorld](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/Helloworld.PNG)
 ### Basic Widgets
 Basic yaitu Text, Row, Column, Stack, Container.
 ```
@@ -97,7 +98,8 @@ Stack berdasarkan posisi tata letak absolut web.
 Widget Container membuat element visual rectangular. Container dapat di dekorasi dengan 
 BoxDecoration seperti background, border, shadow. Container memiliki margin, padding dan constraint sesuai ukuran.
 Container dapat ditransformasikan dalam ruang 3 dimensi dengan matriks.
-Material Icons gunakan `uses-material-design: true`
+Konfigurasi `uses-material-design: true` untuk menggunakan Material Icons.\
+![Basic](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/Basic.PNG)
 ### Material Components
 Flutter menyediakan widget untuk membuat aplikasi mengikuti Material Design. 
 Material app membangun widget di root aplikasi maupun navigator yang mengelola widget dengan identifikasi string atau dikenal `routes`.
@@ -145,6 +147,7 @@ class TutorialHome extends StatelessWidget {
   }
 }
 ```
+![Material](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/MaterialDesign.PNG)
 ### Menangani gestures
 Aplikasi menyertakan beberapa interaksi pengguna dengan sistem dengan mendeteksi gesture input.
 ```
@@ -175,7 +178,8 @@ Widget GestureDetector mendeteksi gesture yang dibuat pengguna.
 GestureDetector memanggil onTap() callback lalu mencetak pesan di console
 untuk mendeteksi input gestures seperti tap, drag, scale.
 Banyak widget menggunakan GestureDetector untuk memberikan callback widget lain 
-seperti IconButton, RaisedButton, FloatingActionButton yang memiliki `onPressed()` callback yang dipicu oleh pengguna.
+seperti IconButton, RaisedButton, FloatingActionButton yang memiliki `onPressed()` callback yang dipicu oleh pengguna.\
+![Gesture](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/Gesture.PNG)
 ### Mengubah widget sebagai respon input
 Widget stateless menerima argument dari parent widget yang disimpan dalan final variabel. 
 Saat widget diminta untuk `build()`, widget menggunakan nilai tersimpan untuk memperoleh argument baru untuk widget yang dibuat.
@@ -260,6 +264,7 @@ class _CounterState extends State<Counter> {
   }
 }
 ```
+![Counter](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/Counter.PNG)
 ### Menyatukan Semua
 Contoh konsep menyatukan semua
 ```
@@ -357,6 +362,7 @@ void main() {
   ));
 }
 ```
+![GetitAll](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/GetitAll.PNG)
 ### Menanggapi event siklus hidup widget
 Subclass state dapat menggantikan initState untuk melakukan pekerjaan yang terjadi sekali. 
 Implementasi `initState` diperlukan untuk memanggil `super.initState`.

@@ -227,6 +227,7 @@
         );
     }
    ```
+![List](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/iconlist.png)
 ### Menambah interaktivitas
 1. Menambahkan kemampuan interaksi dengan *heart icons tappable*.
    Pengguna dapat mengetuk entri pada list untuk mengubah status tambah atau hapus dari favorit.
@@ -255,6 +256,7 @@
         );
     }
    ```
+![Interaktivitas](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/interaktivitas.png)
 ### Navigasi ke Layar Baru
 1. Menambah halaman baru dan menavigasi diantara *home route* dan *new route*.
    Tambahkan *icon* dan *action* pada `build` *method*.
@@ -332,6 +334,7 @@
         );
     }
    ```
+![Navigasi](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/navigasi.png)
 ### Mengubah UI Menggunakan Tema
 1. *theme* mengontrol tampilan aplikasi sesuai keinginan. Mengubah tema aplikasi dengan mengkonfigurasi `ThemeData class`.
    *default theme* mengubah *primary color* aplikasi menjadi putih.
@@ -349,3 +352,4 @@
         }
     }
    ```
+![Theme](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/theme.png)

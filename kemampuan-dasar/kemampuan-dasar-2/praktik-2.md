@@ -68,13 +68,18 @@ To github.com:Fourthten/rhymes.git
    43582f1..3b64f49  master -> master
 ```
 ### Organization 
-![Organization](https://github.com/Fourthten/rhymes/blob/master/images/organization.png)
+![Organization](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/organization.png)
 ### Fork 
-![Fork](https://github.com/Fourthten/rhymes/blob/master/images/fork.png)
+![Fork](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/fork.png)
 ### Issue 
-![Issue](https://github.com/Fourthten/rhymes/blob/master/images/issue.png)
+![Issue](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/issue.png)
 ### Team 
-![Team](https://github.com/Fourthten/rhymes/blob/master/images/team.png)
+![Team](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/team.png)
 ### Collaborators 
-![Collaborators](https://github.com/Fourthten/rhymes/blob/master/images/collaborators.png)
+![Collaborators](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/collaborators.png)
+### Trello
+![Trello](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/Trello.PNG)
+### Webhook
+![Webhooks](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/Webhook.PNG)
+
 

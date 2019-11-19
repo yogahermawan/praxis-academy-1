@@ -96,3 +96,4 @@ class MyCard extends StatelessWidget {
 `void main()` menjalankan `MaterialApp` yang berisi widget `MyStatelessWidget`. 
 `MyStatelessWidget` berisi appBar dan body aplikasi. Body berisi list widget `MyCard`. 
 Widget `MyCard` berisi title dan icon.
+![Stateless](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/images/stateless_widget.PNG)

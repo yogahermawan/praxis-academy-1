@@ -130,8 +130,8 @@ class AwesomeButtonState extends State<AwesomeButton> {
 
   // onPressed function
   void onPressed(){
-    // state merupakan data private komponen yang tidak bisa diakses komponen lain
-    // ketika state berubah maka komponen akan di render atau rebuild
+    // state merupakan data private variabel yang tidak bisa diakses variabel lain
+    // ketika state berubah maka variabel akan di render atau rebuild
     setState(() {
       displayedString = strings[counter];
       counter = counter < 2 ? counter+1 : 0;
@@ -176,4 +176,5 @@ class AwesomeButtonState extends State<AwesomeButton> {
 `void main()` menjalankan `MaterialApp` yang berisi widget `AwesomeButton`. 
 `AwesomeButton` berisi state class `AwesomeButtonState`. Di dalamnya terdiri dari constructor, function, Scaffold. 
 Scaffold berisi appBar, body. Body memiliki raisedbutton yang apabila di press/klik menjalankan function onPressed() 
-untuk mengubah value komponen dalam state tersebut. Kemudian value tersebut ditampilkan ke dalam body.
+untuk mengubah value variabel dalam state tersebut. Kemudian value tersebut ditampilkan ke dalam body.\
+![statefull](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/images/statefull_widget.PNG)

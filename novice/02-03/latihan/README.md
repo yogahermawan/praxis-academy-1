@@ -184,7 +184,9 @@ class DetailScreen extends StatelessWidget {
   }
 }
 ```
-![animate](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/animation.gif)
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/animation.gif" width="100">
+
 - Navigasi layar baru dan kembali
 1. Buat 2 routes
 ```
@@ -292,4 +294,5 @@ class SecondRoute extends StatelessWidget {
   }
 }
 ```
-![navigate](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/navigate.gif)
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/navigate.gif" width="100">

@@ -124,7 +124,7 @@ Hero(
   ),
 );
 ```
-File `animatewidget_acrossscreen.dart`
+File [animatewidget_acrossscreen.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/animatewidget_acrossscreen.dart)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/animation.gif" width="300">
 
@@ -184,7 +184,7 @@ onPressed: () {
   Navigator.pop(context);
 }
 ```
-File `navigation_newscreen.dart`
+File [navigation_newscreen.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/navigation_newscreen.dart)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/navigate.gif" width="300">
 
@@ -260,7 +260,7 @@ onPressed: () {
   Navigator.pop(context);
 }
 ```
-File `navigate_namedroute.dart`
+File [navigate_namedroute.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/navigate_namedroute.dart)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/namedroute.gif" width="300">
 
@@ -335,7 +335,7 @@ RaisedButton(
   },
 ),
 ```
-File `pass_argument.dart`
+File [pass_argument.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/pass_argument.dart)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/pass_argument.gif" width="300">
 
@@ -445,7 +445,7 @@ _navigateAndDisplaySelection(BuildContext context) async {
     ..showSnackBar(SnackBar(content: Text("$result")));
 }
 ```
-File `returndata.dart`
+File [returndata.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/returndata.dart)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/returndata.gif" width="300">
 
@@ -526,6 +526,6 @@ ListView.builder(
   },
 );
 ```
-File `senddata.dart`
+File [senddata.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/senddata.dart)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/senddata.gif" width="300">

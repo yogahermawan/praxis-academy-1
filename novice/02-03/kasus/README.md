@@ -153,3 +153,6 @@ Pada halaman signup yang menjadi route yaitu halaman `CollectPersonalInfoPage` k
 setelah di tap menuju ke halaman `ChooseCredentialsPage`. Setelah di tap maka akan memanggil onSignupComplete() 
 yang nantinya menuju ke '/' route aplikasi atau halaman HomePage. 
 Untuk membuat sample project jalankan perintah `flutter create --sample=widgets.Navigator.1 mysample`.
+File [signupnavigator.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/kasus/signupnavigator.dart)
+
+<img src="" width="300">

@@ -155,4 +155,4 @@ yang nantinya menuju ke '/' route aplikasi atau halaman HomePage.
 Untuk membuat sample project jalankan perintah `flutter create --sample=widgets.Navigator.1 mysample`.
 File [signupnavigator.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/kasus/signupnavigator.dart)
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/kasus/record/navigatesignup.gif" width="300">

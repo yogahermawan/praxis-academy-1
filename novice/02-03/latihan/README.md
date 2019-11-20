@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+![images](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/images/images.PNG)
 ### Mengganti Icon Android
 Untuk android lokasi di `android\app\src\main\res\mipmap` atau pubspec.yaml:
 ```
@@ -56,6 +57,7 @@ run in terminal
 ```
 atau buka android studio, tunggu build selesai. 
 klik kanan folder `res`, `New>Image Asset`, konfigurasi ikonnya.
+![icon](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/images/icon.PNG)
 ### Launch/splash screen
 Untuk android lokasi di `android\app\src\main\res\drawable\launch_background.xml`.
 ```
@@ -69,6 +71,7 @@ Untuk android lokasi di `android\app\src\main\res\drawable\launch_background.xml
     </item>
 </layer-list>
 ```
+![navigasi](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/images/launchscreen.PNG)
 ### Navigasi
 - Animasi widget di layar berbeda
 1. Dua layar dengan gambar sama
@@ -181,6 +184,7 @@ class DetailScreen extends StatelessWidget {
   }
 }
 ```
+![animate](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/animation.gif)
 - Navigasi layar baru dan kembali
 1. Buat 2 routes
 ```
@@ -288,3 +292,4 @@ class SecondRoute extends StatelessWidget {
   }
 }
 ```
+![navigate](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/navigate.gif)

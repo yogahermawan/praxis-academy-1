@@ -262,7 +262,7 @@ onPressed: () {
 ```
 File `navigate_namedroute.dart`
 
-
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/namedroute.gif" width="300">
 
 - Lewati argumen ke route bernama
 1. Tentukan argumen
@@ -337,7 +337,7 @@ RaisedButton(
 ```
 File `pass_argument.dart`
 
-
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/pass_argument.gif" width="300">
 
 - Mengembalikan data dari layar
 1. Tentukan home screen
@@ -447,7 +447,7 @@ _navigateAndDisplaySelection(BuildContext context) async {
 ```
 File `returndata.dart`
 
-
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/returndata.gif" width="300">
 
 - Kirim data ke layar baru
 1. Todo class
@@ -527,3 +527,5 @@ ListView.builder(
 );
 ```
 File `senddata.dart`
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/senddata.gif" width="300">

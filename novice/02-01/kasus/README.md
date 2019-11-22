@@ -81,7 +81,7 @@
     }
    ```
    Aplikasi akan memunculkan *english word* yang di *generate* secara acak setiap di *restart*.\
-   ![englishword]()
+   ![englishword](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/englishword.PNG)
 ### Menambahkan Stateful Widgets
    Stateless widgets tidak dapat dirubah. Stateful widgets memungkinkan berubah selama menggunakan widgets 
    terdiri dari 2 yaitu kelas instance dan kelas state itu sendiri yang tidak dapat dirubah dan tetap ada.
@@ -132,8 +132,7 @@
     }
    ```
    Aplikasi memunculkan *english word* hasil *generate* dengan menggunakan stateful widget.
-   ![]()
-5. Restart app
+   ![stateful](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/statefulwidget.PNG)
 ### Membuat Infinite Scrolling Listview
 1. Tambahkan `_suggestions` *list* pada `RandomWordsState class` untuk menyimpan pasangan kata yang disarankan. 
    Tambahkan `_biggerFont` *variable* untuk font size besar.
@@ -213,21 +212,19 @@
         );
     }
    ```
-   ![]()
-   File []()
+   ![infinitescroll](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/infinitelist.PNG)
+   File [main_part1.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/main_part1.dart)
 ## Part 2
-- Membuat aplikasi Flutter di Android.
-- Menggunakan hot reload untuk pengembangan yang cepat.
 - Menambahkan interaktivitas ke *stateful widget*.
 - Membuat dan menavigasi ke layar kedua.
 - Mengubah tampilan aplikasi menggunakan tema.
 ### Menambah icons pada list
-1. Tambahkan `_saved` *Set*pada `RandomWordsState`. `Set` menyimpan pasangan kata yang disukai, 
+1. Tambahkan `_saved` *Set* pada `RandomWordsState`. `Set` menyimpan pasangan kata yang disukai, 
    `Set` di implementasikan tanpa memungkinkan duplikat entri daripada `List`.
     ```
     class RandomWordsState extends State<RandomWords> {
         final List<WordPair> _suggestions = <WordPair>[];
-        final Set<WordPair> _saved = Set<WordPair>();   // Add this line.
+        final Set<WordPair> _saved = Set<WordPair>();   // Tambah baris ini.
         final TextStyle _biggerFont = TextStyle(fontSize: 18.0);
         ...
     }
@@ -243,15 +240,17 @@
    ```
     Widget _buildRow(WordPair pair) {
     final bool alreadySaved = _saved.contains(pair);
+        // style ListTile
         return ListTile(
             title: Text(
             pair.asPascalCase,
             style: _biggerFont,
             ),
-            trailing: Icon(   // Add the lines from here... 
+            // Tambah Icon Favorite
+            trailing: Icon(   // Tambah baris ini... 
             alreadySaved ? Icons.favorite : Icons.favorite_border,
             color: alreadySaved ? Colors.red : null,
-            ),                // ... to here.
+            ),                // ... sampai sini.
         );
     }
    ```
@@ -272,7 +271,8 @@
             alreadySaved ? Icons.favorite : Icons.favorite_border,
             color: alreadySaved ? Colors.red : null,
             ),
-            onTap: () {      // Add 9 lines from here...
+            // cek pasangan kata tersimpan
+            onTap: () {      // Tambah baris ini...
             setState(() {
                 if (alreadySaved) {
                 _saved.remove(pair);
@@ -280,7 +280,7 @@
                 _saved.add(pair); 
                 } 
             });
-            },               // ... to here.
+            },               // ... sampai sini.
         );
     }
    ```
@@ -293,9 +293,10 @@
         return Scaffold(
         appBar: AppBar(
             title: Text('Startup Name Generator'),
-            actions: <Widget>[      // Add 3 lines from here...
+            actions: <Widget>[      // Tambah baris ini...
+            // Icon list onpressed
             IconButton(icon: Icon(Icons.list), onPressed: _pushSaved),
-            ],                      // ... to here.
+            ],                      // ... sampai sini.
         ),
         body: _buildSuggestions(),
         );
@@ -309,6 +310,7 @@
 3. Panggil `Navigator.push` untuk *push route* ke *navigator stack*
    ```
     void _pushSaved() {
+        // pindah route
         Navigator.of(context).push(
         );
     }
@@ -319,7 +321,7 @@
    ```
     void _pushSaved() {
         Navigator.of(context).push(
-            MaterialPageRoute<void>(   // Add 20 lines from here...
+            MaterialPageRoute<void>(   // Tambah baris ini...
             builder: (BuildContext context) {
                 final Iterable<ListTile> tiles = _saved.map(
                 (WordPair pair) {
@@ -338,7 +340,7 @@
                 )
                 .toList();
             },
-            ),                       // ... to here.
+            ),                       // ... sampai sini.
         );
     }
    ```
@@ -351,12 +353,14 @@
             MaterialPageRoute<void>(
                 builder: (BuildContext context) {
                     // ...
-                    return Scaffold(         // Add 6 lines from here...
-                    appBar: AppBar(
-                        title: Text('Saved Suggestions'),
-                    ),
-                    body: ListView(children: divided),
-                    );                       // ... to here.
+                    return Scaffold(         // Tambah baris ini...
+                        // appBar
+                        appBar: AppBar(
+                            title: Text('Saved Suggestions'),
+                        ),
+                        // body
+                        body: ListView(children: divided),
+                    );                       // ... sampai sini.
                 },
             ),
         );
@@ -372,12 +376,13 @@
         Widget build(BuildContext context) {
             return MaterialApp(
             title: 'Startup Name Generator',
-            theme: ThemeData(          // Add the 3 lines from here... 
+            theme: ThemeData(          // Tambah baris ini... 
                 primaryColor: Colors.white,
-            ),                         // ... to here.
+            ),                         // ... sampai sini.
             home: RandomWords(),
             );
         }
     }
    ```
 ![Theme](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/theme.png)
+File [main_part2.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/main_part2.dart)

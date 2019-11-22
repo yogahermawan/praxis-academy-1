@@ -198,5 +198,7 @@ class CollapsingList extends StatelessWidget {
   }
 }
 ```
-File contoh []()
+File contoh [collapscroll.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-05/latihan/collapscroll.dart)
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-05/latihan/record/getitall.gif" width="300">
 

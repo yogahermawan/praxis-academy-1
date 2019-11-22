@@ -40,7 +40,7 @@
     }
    ```
    Aplikasi akan memunculkan text 'Hello World'.\
-   ![]()
+   ![helloworld](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/helloworld.PNG)
 ### Menggunakan eksternal *package*
 1. Tambahkan *dependencies* `english_words` pada `pubspec.yaml`
    ```
@@ -81,7 +81,7 @@
     }
    ```
    Aplikasi akan memunculkan *english word* yang di *generate* secara acak setiap di *restart*.\
-   ![]()
+   ![englishword]()
 ### Menambahkan Stateful Widgets
    Stateless widgets tidak dapat dirubah. Stateful widgets memungkinkan berubah selama menggunakan widgets 
    terdiri dari 2 yaitu kelas instance dan kelas state itu sendiri yang tidak dapat dirubah dan tetap ada.

@@ -39,8 +39,8 @@
         }
     }
    ```
-   Aplikasi akan memunculkan text 'Hello World'.\
-   ![helloworld](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/helloworld.PNG)
+Aplikasi akan memunculkan text 'Hello World'.\
+![helloworld](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/helloworld.PNG)
 ### Menggunakan eksternal *package*
 1. Tambahkan *dependencies* `english_words` pada `pubspec.yaml`
    ```
@@ -80,8 +80,8 @@
     }
     }
    ```
-   Aplikasi akan memunculkan *english word* yang di *generate* secara acak setiap di *restart*.\
-   ![englishword](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/englishword.PNG)
+Aplikasi akan memunculkan *english word* yang di *generate* secara acak setiap di *restart*.\
+![englishword](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/englishword.PNG)
 ### Menambahkan Stateful Widgets
    Stateless widgets tidak dapat dirubah. Stateful widgets memungkinkan berubah selama menggunakan widgets 
    terdiri dari 2 yaitu kelas instance dan kelas state itu sendiri yang tidak dapat dirubah dan tetap ada.
@@ -131,8 +131,8 @@
         }
     }
    ```
-   Aplikasi memunculkan *english word* hasil *generate* dengan menggunakan stateful widget.
-   ![stateful](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/statefulwidget.PNG)
+Aplikasi memunculkan *english word* hasil *generate* dengan menggunakan stateful widget.\
+![stateful](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/statefulwidget.PNG)
 ### Membuat Infinite Scrolling Listview
 1. Tambahkan `_suggestions` *list* pada `RandomWordsState class` untuk menyimpan pasangan kata yang disarankan. 
    Tambahkan `_biggerFont` *variable* untuk font size besar.
@@ -212,8 +212,9 @@
         );
     }
    ```
-   ![infinitescroll](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/infinitelist.PNG)
-   File [main_part1.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/main_part1.dart)
+Aplikasi memunculkan scroll listview tak terhingga.
+![infinitescroll](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/infinitelist.PNG)\
+File [main_part1.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/main_part1.dart)
 ## Part 2
 - Menambahkan interaktivitas ke *stateful widget*.
 - Membuat dan menavigasi ke layar kedua.
@@ -384,5 +385,5 @@
         }
     }
    ```
-![Theme](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/theme.png)
+![Theme](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/theme.png)\
 File [main_part2.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/main_part2.dart)

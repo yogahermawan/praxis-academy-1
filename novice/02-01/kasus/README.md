@@ -160,13 +160,13 @@ Aplikasi memunculkan *english word* hasil *generate* dengan menggunakan stateful
         });
     }
    ```
-   1. itemBuilder dipanggil sekali perpasangan kata dan menempatkannya pada baris ListTile. 
+   /1/ itemBuilder dipanggil sekali perpasangan kata dan menempatkannya pada baris ListTile. 
       Baris genap menambahkan baris ListTile pasangan kata. Baris ganjil menambahkan widget 
       Divider untuk memisahkan entri secara visual.
-   2. Tambahkan widget divider one-pixel-high setiap baris ListView.
-   3. Membagi i dengan 2 dan *return integer*. Menghitung jumlah pasangan kata ListView 
+   /2/ Tambahkan widget divider one-pixel-high setiap baris ListView.
+   /3/ Membagi i dengan 2 dan *return integer*. Menghitung jumlah pasangan kata ListView 
       dikurangi widget divider. Misal 1,2,3,4,5 menjadi 0,1,1,2,2.
-   4. Jika mencapai akhir pasangan kata maka hasilkan 10 kata lagi dan tambah ke daftar.
+   /4/ Jika mencapai akhir pasangan kata maka hasilkan 10 kata lagi dan tambah ke daftar.
 3. Tambahkan `_buildRow()` *function* pada `RandomWordsState`
    ```
     Widget _buildRow(WordPair pair) {

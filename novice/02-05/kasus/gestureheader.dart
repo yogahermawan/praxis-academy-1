@@ -48,6 +48,7 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
     return new SizedBox.expand(child: child);
   }
 
+  // cek delegasi dengan yang lama sama atau tidak dan rebuild
   @override
   bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
     return maxHeight != oldDelegate.maxHeight ||
@@ -68,7 +69,7 @@ class CollapsingList extends StatelessWidget {
         // min max height appbar
         minHeight: 60.0,
         maxHeight: 200.0,
-        // Container style
+        // Call Header
         child: Header(headerText)
       ),
     );

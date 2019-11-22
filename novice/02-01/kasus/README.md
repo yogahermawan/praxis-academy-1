@@ -1,7 +1,7 @@
 ## Part 1
 - Cara menulis aplikasi Flutter di Android.
 - Struktur dasar aplikasi Flutter.
-- Menemukan dan menggunakan paket untuk memperluas fungsionalitas.
+- Menemukan dan menggunakan *package* untuk memperluas fungsionalitas.
 - Menggunakan hot reload untuk pengembangan lebih cepat.
 - Menerapkan *stateful widget*.
 - Membuat *infinite scrolling listview*.
@@ -12,30 +12,37 @@
     // Copyright 2018 The Flutter team. All rights reserved.
     // Use of this source code is governed by a BSD-style license that can be
     // found in the LICENSE file.
-
+    // import package
     import 'package:flutter/material.dart';
-
+    // run App
     void main() => runApp(MyApp());
-
+    // Widget MyApp
     class MyApp extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-        title: 'Welcome to Flutter',
-        home: Scaffold(
-            appBar: AppBar(
-            title: Text('Welcome to Flutter'),
+        @override
+        Widget build(BuildContext context) {
+            return MaterialApp(
+            // title
+            title: 'Welcome to Flutter',
+            // Scaffold struktur
+            home: Scaffold(
+                // appBar
+                appBar: AppBar(
+                title: Text('Welcome to Flutter'),
+                ),
+                // body
+                body: Center(
+                // text 'Hello World'
+                child: Text('Hello World'),
+                ),
             ),
-            body: Center(
-            child: Text('Hello World'),
-            ),
-        ),
-        );
-    }
+            );
+        }
     }
    ```
+   Aplikasi akan memunculkan text 'Hello World'.\
+   ![]()
 ### Menggunakan eksternal *package*
-3. Tambahkan *dependencies* `english_words`
+1. Tambahkan *dependencies* `english_words` pada `pubspec.yaml`
    ```
     dependencies:
     flutter:
@@ -46,12 +53,12 @@
     cupertino_icons: ^0.1.2
    + english_words: ^3.1.0
    ```
-4. *Pull package*
+2. *Pull package* di terminal
    ```
    flutter pub get
    ```
-5. import package `import 'package:english_words/english_words.dart';` di `lib\main.dart`
-6. Gunakan english_word untuk generate text
+3. import package `import 'package:english_words/english_words.dart';` di `lib\main.dart`
+4. Gunakan english_word untuk generate text
    ```
     class MyApp extends StatelessWidget {
     @override
@@ -65,6 +72,7 @@
             ),
             body: Center(
             - child: Text('Hello World'),
+            // Text generate english
             + child: Text(wordPair.asPascalCase),
             ),
         ),
@@ -72,6 +80,8 @@
     }
     }
    ```
+   Aplikasi akan memunculkan *english word* yang di *generate* secara acak setiap di *restart*.\
+   ![]()
 ### Menambahkan Stateful Widgets
    Stateless widgets tidak dapat dirubah. Stateful widgets memungkinkan berubah selama menggunakan widgets 
    terdiri dari 2 yaitu kelas instance dan kelas state itu sendiri yang tidak dapat dirubah dan tetap ada.
@@ -94,6 +104,7 @@
         @override
         Widget build(BuildContext context) {
             final wordPair = WordPair.random();
+            // mengembalikan nilai text
             return Text(wordPair.asPascalCase);
         }
     }
@@ -112,6 +123,7 @@
                 ),
                 body: Center(
                 - child: Text(wordPair.asPascalCase),
+                // call RandomWords
                 + child: RandomWords(),
                 ),
             ),
@@ -119,6 +131,8 @@
         }
     }
    ```
+   Aplikasi memunculkan *english word* hasil *generate* dengan menggunakan stateful widget.
+   ![]()
 5. Restart app
 ### Membuat Infinite Scrolling Listview
 1. Tambahkan `_suggestions` *list* pada `RandomWordsState class` untuk menyimpan pasangan kata yang disarankan. 
@@ -134,6 +148,7 @@
    ```
     Widget _buildSuggestions() {
         return ListView.builder(
+        // padding item
         padding: const EdgeInsets.all(16.0),
         itemBuilder: /*1*/ (context, i) {
             if (i.isOdd) return Divider(); /*2*/
@@ -146,9 +161,17 @@
         });
     }
    ```
+   1. itemBuilder dipanggil sekali perpasangan kata dan menempatkannya pada baris ListTile. 
+      Baris genap menambahkan baris ListTile pasangan kata. Baris ganjil menambahkan widget 
+      Divider untuk memisahkan entri secara visual.
+   2. Tambahkan widget divider one-pixel-high setiap baris ListView.
+   3. Membagi i dengan 2 dan *return integer*. Menghitung jumlah pasangan kata ListView 
+      dikurangi widget divider. Misal 1,2,3,4,5 menjadi 0,1,1,2,2.
+   4. Jika mencapai akhir pasangan kata maka hasilkan 10 kata lagi dan tambah ke daftar.
 3. Tambahkan `_buildRow()` *function* pada `RandomWordsState`
    ```
     Widget _buildRow(WordPair pair) {
+        // style ListTile
         return ListTile(
             title: Text(
             pair.asPascalCase,
@@ -161,10 +184,13 @@
    daripada langsung memanggil *word generation library*. (Scaffold mengimplementasikan dasar tata letak visual Material Design.)
    ```
     Widget build(BuildContext context) {
+        // Scaffold struktur
         return Scaffold(
+            // appBar
             appBar: AppBar(
             title: Text('Startup Name Generator'),
             ),
+            // body
             body: _buildSuggestions(),
         );
     }
@@ -187,6 +213,8 @@
         );
     }
    ```
+   ![]()
+   File []()
 ## Part 2
 - Membuat aplikasi Flutter di Android.
 - Menggunakan hot reload untuk pengembangan yang cepat.

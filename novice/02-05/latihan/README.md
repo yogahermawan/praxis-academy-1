@@ -59,6 +59,7 @@ class MyApp extends StatelessWidget {
 
 // _SliverAppBarDelegate
 class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
+  // constructor
   _SliverAppBarDelegate({
     @required this.minHeight,
     @required this.maxHeight,
@@ -83,6 +84,7 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
     return new SizedBox.expand(child: child);
   }
 
+  // cek delegasi dengan yang lama sama atau tidak dan rebuild
   @override
   bool shouldRebuild(_SliverAppBarDelegate oldDelegate) {
     return maxHeight != oldDelegate.maxHeight ||

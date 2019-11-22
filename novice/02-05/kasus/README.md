@@ -1,5 +1,9 @@
 ### Gesture Detector
-Pada aplikasi sebelumnya, tambahkan widget Header
+Sistem gesture terdiri dari 2 layer terpisah. layer 1 memiliki 
+pointer event yang menggambarkan lokasi dan pergerakan pointer 
+di layar (sentuhan, mouse). layer 2 memiliki gesture yang 
+menggambarkan tindakan dari satu atau lebih pointer movement.\
+Pada aplikasi sebelumnya, tambahkan widget Header yang memiliki GestureDetector.
 ```
 class Header extends StatelessWidget {
     Header(this.headerText,{Key key,}) : super(key: key);

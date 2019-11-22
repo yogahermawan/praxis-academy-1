@@ -32,6 +32,9 @@ Custom grid layout :
   saat scroll ke bawah bahkan saat belum mencapai bagian atas daftar. 
   Jika menambahkan parameter snap dan floating dapat membuat appbar kembali ke tampilan saat di scroll ke bawah. 
 ### Menyatukan Semua: collapsible scrolling list dengan SliverPersistentHeader
+Terdiri dari 4 header yang berisi SliverGrid(Header 1), SliverFixedExtentList(Header 2), 
+SliverGrid dengan MaxCrossAxisExtent(Header 3), SliverList(Header 4). 
+Saat di scroll ke bawah maka isi header di atasnya akan tertutup namun header tetap muncul.
 ```
 // import package
 import 'package:flutter/material.dart';
@@ -154,7 +157,7 @@ class CollapsingList extends StatelessWidget {
             ],
           ),
         ),
-        // SilverGrid dengan MaxCrossAxisExtent
+        // SliverGrid dengan MaxCrossAxisExtent
         makeHeader('Header Section 3'),
         SliverGrid(
           gridDelegate: new SliverGridDelegateWithMaxCrossAxisExtent(

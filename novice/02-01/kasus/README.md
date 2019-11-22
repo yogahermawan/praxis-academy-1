@@ -212,7 +212,7 @@ Aplikasi memunculkan *english word* hasil *generate* dengan menggunakan stateful
         );
     }
    ```
-Aplikasi memunculkan scroll listview tak terhingga.
+Aplikasi memunculkan scroll listview tak terhingga.\
 ![infinitescroll](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/images/infinitelist.PNG)\
 File [main_part1.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/kasus/main_part1.dart)
 ## Part 2

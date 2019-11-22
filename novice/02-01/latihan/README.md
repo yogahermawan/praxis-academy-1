@@ -21,5 +21,5 @@ Flutter adalah *framework cross platform* untuk membangun *native mobile app*.
 11. Pilih android device
 12. Jalankan app, klik `F5` atau `Debug>Start debugging` (VS Code) atau `myapp>flutter run` (Terminal)
 13. Edit `lib\main.dart` lalu `save` untuk mencoba `hot reloading`\
-File [main.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/latihan/main.dart)
+File [main.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/latihan/main.dart)\
 ![first](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/latihan/images/main.PNG)

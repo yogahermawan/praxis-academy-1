@@ -23,3 +23,13 @@ Flutter adalah *framework cross platform* untuk membangun *native mobile app*.
 13. Edit `lib\main.dart` lalu `save` untuk mencoba `hot reloading`\
 File [main.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/latihan/main.dart)\
 ![first](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-01/latihan/images/main.PNG)
+
+Sumber:\
+[Install Flutter](https://flutter.dev/docs/get-started/install)\
+[Lingkungan Pengembangan Flutter](https://medium.com/@kamiwabi.id/menyiapkan-lingkungan-pengembangan-untuk-flutter-9c8edf48715e)\
+[Flutter Real Device](https://medium.com/@kamiwabi.id/flutter-pada-real-device-a54c9795cf74)\
+[Install Visual Studio Code](https://flutter.dev/docs/get-started/editor?tab=vscode)\
+[Install Android Studio](https://flutter.dev/docs/get-started/editor?tab=androidstudio)\
+[Mulai Flutter dengan VS Code](https://flutter.dev/docs/get-started/test-drive?tab=vscode)\
+[Mulai Flutter dengan Android Studio](https://flutter.dev/docs/get-started/test-drive?tab=androidstudio)\
+[Mulai Flutter dengan Terminal](https://flutter.dev/docs/get-started/test-drive?tab=terminal)

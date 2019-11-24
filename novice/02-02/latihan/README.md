@@ -595,7 +595,7 @@ class _TapboxAState extends State<TapboxA> {
   }
 }
 ```
-File [ownstate.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/ownstate.dart)
+File [ownstate.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/ownstate.dart)\
 2. Parent widget mengelola widget state
 ```
 // ParentWidget manages the state for TapboxB.

@@ -96,6 +96,7 @@ class MyCard extends StatelessWidget {
 `void main()` menjalankan `MaterialApp` yang berisi widget `MyStatelessWidget`. 
 `MyStatelessWidget` berisi appBar dan body aplikasi. Body berisi list widget `MyCard`. 
 Widget `MyCard` berisi title dan icon.\
+File [stateless_widget.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/stateless_widget.dart)\
 ![Stateless](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/images/stateless_widget.PNG)
 ### Button dan Stateful Widget
 Stateful dan state terpisah dan berbeda,
@@ -177,6 +178,7 @@ class AwesomeButtonState extends State<AwesomeButton> {
 `AwesomeButton` berisi state class `AwesomeButtonState`. Di dalamnya terdiri dari constructor, function, Scaffold. 
 Scaffold berisi appBar, body. Body memiliki raisedbutton yang apabila di press/klik menjalankan function onPressed() 
 untuk mengubah value variabel dalam state tersebut. Kemudian value tersebut ditampilkan ke dalam body.\
+File [statefull_widget.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/statefull_widget.dart)\
 ![statefull](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/images/statefull_widget.PNG)
 ### Basic Navigasi dan Routes
 1. Simpel route menggunakan StatelessWidget
@@ -259,9 +261,10 @@ class SecondPage extends StatelessWidget {
   }
 }
 ```
-Pada Home Page apabila `onPress` *icon favorite* akan *route* ke Second Page. Jika klik tombol *back* pada Second Page akan kembali ke Home Page.
+Pada Home Page apabila `onPress` *icon favorite* akan *route* ke Second Page. Jika klik tombol *back* pada Second Page akan kembali ke Home Page.\
+File [route_stateless.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/route_stateless.dart)
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/record/routestateless.gif" width="300">
 
 2. Route menggunakan StatefulWidget
 ```
@@ -415,9 +418,10 @@ button `access_alarm` apabila di onPress call `_onButtonPressed` menavigasi ke h
 floating button `add` apabila di onPress call `_incrementCounter` menavigasi ke halaman MyItemsPage. 
 Pada halaman MyItemsPage menampilkan appbar, text, button `arrow_back` dan floating button `add`. 
 button `arrow_back` apabila di onPress call `_onButtonPressed` menavigasi ke halaman sebelumnya. 
-floating button `add` apabila di onPress hanya call `_onFloatingActionButtonPressed` tanpa ada perintah berikutnya. 
+floating button `add` apabila di onPress hanya call `_onFloatingActionButtonPressed` tanpa ada perintah berikutnya.\
+File [route_stateful.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/route_stateful.dart)
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/record/routestateful.gif" width="300">
 
 Sumber:
 [Flutter Tutorials Handbook](https://kodestat.gitbook.io/flutter/)

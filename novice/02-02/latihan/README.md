@@ -551,8 +551,8 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
   }
 }
 ```
-File []()\
-![]()
+File [example_stateful.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/example_stateful.dart)\
+![Stateful](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/images/stateful.PNG)
 ### Manage state
 1. Widget mengelola state sendiri
 Listview otomatis scroll ketika isi melebihi render box.
@@ -595,9 +595,7 @@ class _TapboxAState extends State<TapboxA> {
   }
 }
 ```
-File []()
-<img src="" width="300">
-
+File [ownstate.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/ownstate.dart)
 2. Parent widget mengelola widget state
 ```
 // ParentWidget manages the state for TapboxB.
@@ -658,7 +656,11 @@ class TapboxB extends StatelessWidget {
   }
 }
 ```
-[]()
+File [parentwidget.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/parentwidget.dart)\
+app state sendiri dan parent widget:
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/record/ownstate.gif" width="300">
+
 3. Pendekatan mix-and-match
 ```
 //---------------------------- ParentWidget ----------------------------
@@ -755,7 +757,10 @@ class _TapboxCState extends State<TapboxC> {
   }
 }
 ```
-File []()
+File [mixandmatch.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/mixandmatch.dart)
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/record/mixandmatch.gif" width="300">
+
 ### Widget interaktif lainnya
 Flutter menawarkan berbagai tombol dan widget interaktif serupa. 
 Gunakan GestureDetector untuk membangun interaktivitas ke widget khusus apa pun.

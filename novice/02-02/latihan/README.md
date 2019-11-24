@@ -15,7 +15,7 @@ void main() {
   );
 }
 ```
-![HelloWorld](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/Helloworld.PNG)
+![HelloWorld](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/images/Helloworld.PNG)
 ### Basic Widgets
 Basic yaitu Text, Row, Column, Stack, Container.
 ```
@@ -99,7 +99,7 @@ Widget Container membuat element visual rectangular. Container dapat di dekorasi
 BoxDecoration seperti background, border, shadow. Container memiliki margin, padding dan constraint sesuai ukuran.
 Container dapat ditransformasikan dalam ruang 3 dimensi dengan matriks.
 Konfigurasi `uses-material-design: true` untuk menggunakan Material Icons.\
-![Basic](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/Basic.PNG)
+![Basic](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/images/Basic.PNG)
 ### Material Components
 Flutter menyediakan widget untuk membuat aplikasi mengikuti Material Design. 
 Material app membangun widget di root aplikasi maupun navigator yang mengelola widget dengan identifikasi string atau dikenal `routes`.
@@ -147,7 +147,7 @@ class TutorialHome extends StatelessWidget {
   }
 }
 ```
-![Material](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/MaterialDesign.PNG)
+![Material](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/images/MaterialDesign.PNG)
 ### Menangani gestures
 Aplikasi menyertakan beberapa interaksi pengguna dengan sistem dengan mendeteksi gesture input.
 ```
@@ -179,7 +179,7 @@ GestureDetector memanggil onTap() callback lalu mencetak pesan di console
 untuk mendeteksi input gestures seperti tap, drag, scale.
 Banyak widget menggunakan GestureDetector untuk memberikan callback widget lain 
 seperti IconButton, RaisedButton, FloatingActionButton yang memiliki `onPressed()` callback yang dipicu oleh pengguna.\
-![Gesture](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/Gesture.PNG)
+![Gesture](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/images/Gesture.PNG)
 ### Mengubah widget sebagai respon input
 Widget stateless menerima argument dari parent widget yang disimpan dalan final variabel. 
 Saat widget diminta untuk `build()`, widget menggunakan nilai tersimpan untuk memperoleh argument baru untuk widget yang dibuat.
@@ -264,7 +264,8 @@ class _CounterState extends State<Counter> {
   }
 }
 ```
-![Counter](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/Counter.PNG)
+![Counter](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/images/Counter.PNG)\
+File [main_latihan1.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/main_latihan1.dart)
 ### Menyatukan Semua
 Contoh konsep menyatukan semua
 ```
@@ -362,7 +363,8 @@ void main() {
   ));
 }
 ```
-![GetitAll](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/Images/GetitAll.PNG)
+![GetitAll](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/images/GetitAll.PNG)\
+File [main_latihan2.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/latihan/main_latihan2.dart)
 ### Menanggapi event siklus hidup widget
 Subclass state dapat menggantikan initState untuk melakukan pekerjaan yang terjadi sekali. 
 Implementasi `initState` diperlukan untuk memanggil `super.initState`.
@@ -374,6 +376,394 @@ Dengan key, framework membutuhkan 2 widget memiliki key dan runtimeType yang sam
 ### Global Key
 Global key mengidentifikasi child widget. Global key harus unik secara global di seluruh widget dan dapat 
 digunakan untuk mengambil state yang terkait dengan widget.
+## Layout
+Digunakan untuk tata letak widget.
+1. Pilih [layout widget](https://flutter.dev/docs/development/ui/widgets/layout). 
+2. Buat visible widget.\
+    Text
+    ```
+    Text('Hello World'),
+    ```
+    Image
+    ```
+    Image.asset(
+      'images/lake.jpg',
+      fit: BoxFit.cover,
+    ),
+    ```
+    Icon
+    ```
+    Icon(
+      Icons.star,
+      color: Colors.red[500],
+    ),
+    ```
+3. Tambah visible widget ke layout widget. 
+child untuk single widget, contoh center atau container. 
+children untuk list widget, contoh row, column, listview, stack.
+    ```
+    Center(
+      child: Text('Hello World'),
+    ),
+    ```
+4. Tambah layout widget ke halaman.\
+   Material App untuk menggunakan widget Scaffold yang menyediakan banner, background color, API untuk drawer, snackbar, bottom sheet.
+   ```
+   class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return MaterialApp(
+          title: 'Flutter layout demo',
+          home: Scaffold(
+            appBar: AppBar(
+              title: Text('Flutter layout demo'),
+            ),
+            body: Center(
+              child: Text('Hello World'),
+            ),
+          ),
+        );
+      }
+    }
+   ```
+   Non-Material App tidak menyediakan appBar, title, background color.
+   ```
+   class MyApp extends StatelessWidget {
+      @override
+      Widget build(BuildContext context) {
+        return Container(
+          decoration: BoxDecoration(color: Colors.white),
+          child: Center(
+            child: Text(
+              'Hello World',
+              textDirection: TextDirection.ltr,
+              style: TextStyle(
+                fontSize: 32,
+                color: Colors.black87,
+              ),
+            ),
+          ),
+        );
+      }
+    }
+   ```
+`Row` untuk layout horizontal. `Column` untuk layout vertical. `mainAxisAlignment` untuk layout horizontal (row) dan vertical (column). 
+`crossAxisAlignment ` untuk layout vertical (row) dan horizontal (column).\
+Sizing widget untuk fit row atau column menggunakan widget expanded. 
+Flex pada widget expanded untuk mengatur ukuran ruang. Default flex 1,
+```
+Expanded(
+  flex: 2,
+  child: Image.asset('images/pic2.jpg'),
+),
+```
+Packing widget menggunakan `MainAxisSize.min`.\
+Contoh Nested row dan column:
+```
+var stars = Row(
+  mainAxisSize: MainAxisSize.min,
+  children: [
+    Icon(Icons.star, color: Colors.green[500]),
+    Icon(Icons.star, color: Colors.green[500]),
+    Icon(Icons.star, color: Colors.green[500]),
+    Icon(Icons.star, color: Colors.black),
+    Icon(Icons.star, color: Colors.black),
+  ],
+);
+
+final ratings = Container(
+  padding: EdgeInsets.all(20),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      stars,
+      Text(
+        '170 Reviews',
+        style: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.w800,
+          fontFamily: 'Roboto',
+          letterSpacing: 0.5,
+          fontSize: 20,
+        ),
+      ),
+    ],
+  ),
+);
+```
+Layout widget umum:
+- Standard widget terdiri dari Container, GridView, ListView, Stack.
+- Material widget (khusus) terdiri dari Card, ListTile.
+## Menambahkan Interaktivitas
+Widget stateless tidak pernah berubah. Icon, IconButton, dan Text adalah contoh stateless widget. 
+Widget stateful bersifat dinamis yang dapat mengubah tampilannya sebagai respons dari peristiwa yang dipicu oleh interaksi pengguna atau ketika menerima data. 
+Checkbox, Radio, Slider, InkWell, Form, dan TextField adalah contoh widget stateful.
+State widget disimpan dalam objek State, memisahkan state widget dari penampilannya. 
+State terdiri dari nilai yang dapat berubah, seperti nilai slider saat ini atau apakah checkbox dicentang. 
+Saat state widget berubah, objek state memanggil setState(), memberi tahu framework untuk menggambar ulang widget.
+### Membuat stateful widget
+Menerapkan stateful widget membutuhkan 2 kelas:
+- Subclass StatefulWidget yang mendefinisikan widget itu.
+- Subclass State yang berisi state untuk widget itu dan mendefinisikan metode build().
+```
+class FavoriteWidget extends StatefulWidget {
+  @override
+  _FavoriteWidgetState createState() => _FavoriteWidgetState();
+}
+
+class _FavoriteWidgetState extends State<FavoriteWidget> {
+  bool _isFavorited = true;
+  int _favoriteCount = 41;
+
+  void _toggleFavorite() {
+    setState(() {
+      if (_isFavorited) {
+        _favoriteCount -= 1;
+        _isFavorited = false;
+      } else {
+        _favoriteCount += 1;
+        _isFavorited = true;
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Container(
+          padding: EdgeInsets.all(0),
+          child: IconButton(
+            icon: (_isFavorited ? Icon(Icons.star) : Icon(Icons.star_border)),
+            color: Colors.red[500],
+            onPressed: _toggleFavorite,
+          ),
+        ),
+        SizedBox(
+          width: 18,
+          child: Container(
+            child: Text('$_favoriteCount'),
+          ),
+        ),
+      ],
+    );
+  }
+}
+```
+File []()\
+![]()
+### Manage state
+1. Widget mengelola state sendiri
+Listview otomatis scroll ketika isi melebihi render box.
+```
+// TapboxA manages its own state.
+//------------------------- TapboxA ----------------------------------
+class TapboxA extends StatefulWidget {
+  TapboxA({Key key}) : super(key: key);
+
+  @override
+  _TapboxAState createState() => _TapboxAState();
+}
+
+class _TapboxAState extends State<TapboxA> {
+  bool _active = false;
+
+  void _handleTap() {
+    setState(() {
+      _active = !_active;
+    });
+  }
+
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _handleTap,
+      child: Container(
+        child: Center(
+          child: Text(
+            _active ? 'Active' : 'Inactive',
+            style: TextStyle(fontSize: 32.0, color: Colors.white),
+          ),
+        ),
+        width: 200.0,
+        height: 200.0,
+        decoration: BoxDecoration(
+          color: _active ? Colors.lightGreen[700] : Colors.grey[600],
+        ),
+      ),
+    );
+  }
+}
+```
+File []()
+<img src="" width="300">
+
+2. Parent widget mengelola widget state
+```
+// ParentWidget manages the state for TapboxB.
+//------------------------ ParentWidget --------------------------------
+class ParentWidget extends StatefulWidget {
+  @override
+  _ParentWidgetState createState() => _ParentWidgetState();
+}
+
+class _ParentWidgetState extends State<ParentWidget> {
+  bool _active = false;
+
+  void _handleTapboxChanged(bool newValue) {
+    setState(() {
+      _active = newValue;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: TapboxB(
+        active: _active,
+        onChanged: _handleTapboxChanged,
+      ),
+    );
+  }
+}
+//------------------------- TapboxB ----------------------------------
+class TapboxB extends StatelessWidget {
+  TapboxB({Key key, this.active: false, @required this.onChanged})
+      : super(key: key);
+
+  final bool active;
+  final ValueChanged<bool> onChanged;
+
+  void _handleTap() {
+    onChanged(!active);
+  }
+
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _handleTap,
+      child: Container(
+        child: Center(
+          child: Text(
+            active ? 'Active' : 'Inactive',
+            style: TextStyle(fontSize: 32.0, color: Colors.white),
+          ),
+        ),
+        width: 200.0,
+        height: 200.0,
+        decoration: BoxDecoration(
+          color: active ? Colors.lightGreen[700] : Colors.grey[600],
+        ),
+      ),
+    );
+  }
+}
+```
+[]()
+3. Pendekatan mix-and-match
+```
+//---------------------------- ParentWidget ----------------------------
+
+class ParentWidget extends StatefulWidget {
+  @override
+  _ParentWidgetState createState() => _ParentWidgetState();
+}
+
+class _ParentWidgetState extends State<ParentWidget> {
+  bool _active = false;
+
+  void _handleTapboxChanged(bool newValue) {
+    setState(() {
+      _active = newValue;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: TapboxC(
+        active: _active,
+        onChanged: _handleTapboxChanged,
+      ),
+    );
+  }
+}
+
+//----------------------------- TapboxC ------------------------------
+
+class TapboxC extends StatefulWidget {
+  TapboxC({Key key, this.active: false, @required this.onChanged})
+      : super(key: key);
+
+  final bool active;
+  final ValueChanged<bool> onChanged;
+
+  _TapboxCState createState() => _TapboxCState();
+}
+
+class _TapboxCState extends State<TapboxC> {
+  bool _highlight = false;
+
+  void _handleTapDown(TapDownDetails details) {
+    setState(() {
+      _highlight = true;
+    });
+  }
+
+  void _handleTapUp(TapUpDetails details) {
+    setState(() {
+      _highlight = false;
+    });
+  }
+
+  void _handleTapCancel() {
+    setState(() {
+      _highlight = false;
+    });
+  }
+
+  void _handleTap() {
+    widget.onChanged(!widget.active);
+  }
+
+  Widget build(BuildContext context) {
+    // This example adds a green border on tap down.
+    // On tap up, the square changes to the opposite state.
+    return GestureDetector(
+      onTapDown: _handleTapDown, // Handle the tap events in the order that
+      onTapUp: _handleTapUp, // they occur: down, up, tap, cancel
+      onTap: _handleTap,
+      onTapCancel: _handleTapCancel,
+      child: Container(
+        child: Center(
+          child: Text(widget.active ? 'Active' : 'Inactive',
+              style: TextStyle(fontSize: 32.0, color: Colors.white)),
+        ),
+        width: 200.0,
+        height: 200.0,
+        decoration: BoxDecoration(
+          color:
+              widget.active ? Colors.lightGreen[700] : Colors.grey[600],
+          border: _highlight
+              ? Border.all(
+                  color: Colors.teal[700],
+                  width: 10.0,
+                )
+              : null,
+        ),
+      ),
+    );
+  }
+}
+```
+File []()
+### Widget interaktif lainnya
+Flutter menawarkan berbagai tombol dan widget interaktif serupa. 
+Gunakan GestureDetector untuk membangun interaktivitas ke widget khusus apa pun.
+
+Sumber:\
+[Introduction to Widget](https://flutter.dev/docs/development/ui/widgets-intro)\
+[Layout in Flutter](https://flutter.dev/docs/development/ui/layout)\
+[Adding Interactivity](https://flutter.dev/docs/development/ui/interactive)
 
 
 

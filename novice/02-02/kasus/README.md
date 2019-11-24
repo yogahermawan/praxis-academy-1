@@ -178,3 +178,243 @@ class AwesomeButtonState extends State<AwesomeButton> {
 Scaffold berisi appBar, body. Body memiliki raisedbutton yang apabila di press/klik menjalankan function onPressed() 
 untuk mengubah value variabel dalam state tersebut. Kemudian value tersebut ditampilkan ke dalam body.\
 ![statefull](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-02/kasus/images/statefull_widget.PNG)
+### Basic Navigasi dan Routes
+1. Simpel route menggunakan StatelessWidget
+```
+// import package
+import 'package:flutter/material.dart';
+
+void main() {
+  // run app
+  runApp(
+  new MaterialApp(
+    // call homePage
+    home: new HomePage(),
+    // route halaman kedua
+    routes: <String, WidgetBuilder>{
+      "/SecondPage": (BuildContext context) => new SecondPage()
+    },
+    debugShowCheckedModeBanner: false,
+  ));
+}
+
+// Widget HomePage
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    // Scaffold
+    return new Scaffold(
+      // style appBar
+      appBar: new AppBar(title: new Text("Home Page"), backgroundColor: Colors.deepOrange),
+      // body
+      body: new Container(
+        child: new Center(
+          child: new Column(
+            // alignment
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              // Icon dan Text
+              new IconButton(
+                icon: new Icon(Icons.favorite, color: Colors.redAccent),
+                iconSize: 70.0,
+                // onPress route ke halaman kedua
+                onPressed: () {Navigator.of(context).pushNamed("/SecondPage");}
+              ),
+              new Text("Home")
+            ]
+          )
+        )
+      )
+    );
+  }
+}
+
+// Widget SecondPage
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context){
+    return new Scaffold(
+      // style appBar
+      appBar: new AppBar(title: new Text("Second Page"), backgroundColor: Colors.deepOrange),
+      // body
+      body: new Container(
+        child: new Center(
+          child: new Column(
+            // alignment
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              // Icon dan text
+              new IconButton(
+                icon: new Icon(Icons.home, color: Colors.blue),
+                iconSize: 70.0,
+                // OnPress null
+                onPressed: null,
+              ),
+              new Text("Second Page")
+            ]
+          )
+        )
+      )
+    );
+  }
+}
+```
+Pada Home Page apabila `onPress` *icon favorite* akan *route* ke Second Page. Jika klik tombol *back* pada Second Page akan kembali ke Home Page.
+
+<img src="" width="300">
+
+2. Route menggunakan StatefulWidget
+```
+// import package
+import 'package:flutter/material.dart';
+
+// runapp
+void main() => runApp(new MyApp());
+
+// Widget MyApp
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // variabel
+    var routes = <String, WidgetBuilder>{
+      MyItemsPage.routeName: (BuildContext context) => new MyItemsPage(title: "MyItemsPage"),
+    };
+    return new MaterialApp(
+      title: 'Flutter Demo',
+      // tema app
+      theme: new ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      // call MyHomePage
+      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      // route MyItemsPage
+      routes: routes,
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+// Widget MyHomePage
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  // State MyHomePage
+  _MyHomePageState createState() => new _MyHomePageState();
+}
+
+// State _MyHomePageState
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  // route ke MyItemsPage
+  void _incrementCounter() {
+    Navigator.pushNamed(context, MyItemsPage.routeName);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // button call _onButtonPressed
+    var button = new IconButton(icon: new Icon(Icons.access_alarm), onPressed: _onButtonPressed);
+    return new Scaffold(
+      // appbar
+      appBar: new AppBar(
+        title: new Text(widget.title),
+      ),
+      // body
+      body: new Column(
+        children: <Widget>[
+          // text dan button
+          new Text('Dog'),
+          new Text('Cat'),
+          button
+        ],
+      ),
+      // floatingActionButton call _incrementCounter
+      floatingActionButton: new FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: new Icon(Icons.add),
+      ),
+    );
+  }
+
+  // route ke MyItemsPage
+  void _onButtonPressed() {
+    Navigator.pushNamed(context, MyItemsPage.routeName);
+  }
+}
+
+// Widget MyItemsPage
+class MyItemsPage extends StatefulWidget {
+  MyItemsPage({Key key, this.title}) : super(key: key);
+  // contructor
+
+  static const String routeName = "/MyItemsPage";
+
+  final String title;
+
+  @override
+  // State MyItemsPage
+  _MyItemsPageState createState() => new _MyItemsPageState();
+}
+
+// 1. Setelah halaman dibuat, registrasi dengan routes app
+// routes: <String, WidgetBuilder>{
+//   MyItemsPage.routeName: (BuildContext context) => new MyItemsPage(title: "MyItemsPage"),
+// },
+
+// 2. Bisa juga menggunakAan navigasi ke halaman.
+// Navigator.pushNamed(context, MyItemsPage.routeName);
+
+// State _MyItemsPageState
+class _MyItemsPageState extends State<MyItemsPage> {
+  @override
+  Widget build(BuildContext context) {
+    // button call _onButtonPressed
+    var button = new IconButton(icon: new Icon(Icons.arrow_back), onPressed: _onButtonPressed);
+    return new Scaffold(
+      // appBar
+      appBar: new AppBar(
+        title: new Text(widget.title),
+      ),
+      // body
+      body: new Container(
+        child: new Column(
+          children: <Widget>[
+            // Text dan button
+            new Text('Item1'),
+            new Text('Item2'),
+            button
+          ],
+        ),
+      ),
+      // floatingActionButton call _onFloatingActionButtonPressed
+      floatingActionButton: new FloatingActionButton(
+        onPressed: _onFloatingActionButtonPressed,
+        tooltip: 'Add',
+        child: new Icon(Icons.add),
+      ),
+    );
+  }
+
+  // null function
+  void _onFloatingActionButtonPressed() {
+  }
+
+  // navigasi go back
+  void _onButtonPressed() {
+    Navigator.pop(context);
+  }
+}
+```
+Pada halaman MyHomePage menampilkan appbar, text, button `access_alarm` dan floating button `add`. 
+button `access_alarm` apabila di onPress call `_onButtonPressed` menavigasi ke halaman MyItemsPage. 
+floating button `add` apabila di onPress call `_incrementCounter` menavigasi ke halaman MyItemsPage. 
+Pada halaman MyItemsPage menampilkan appbar, text, button `arrow_back` dan floating button `add`. 
+button `arrow_back` apabila di onPress call `_onButtonPressed` menavigasi ke halaman sebelumnya. 
+floating button `add` apabila di onPress hanya call `_onFloatingActionButtonPressed` tanpa ada perintah berikutnya. 
+
+<img src="" width="300">

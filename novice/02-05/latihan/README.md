@@ -206,3 +206,6 @@ class CollapsingList extends StatelessWidget {
 File contoh [collapscroll.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-05/latihan/collapscroll.dart)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-05/latihan/record/getitall.gif" width="300">
+
+Sumber:\
+[Sliver Demystified](https://medium.com/flutter/slivers-demystified-6ff68ab0296f)

@@ -529,3 +529,7 @@ ListView.builder(
 File [senddata.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/senddata.dart)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/latihan/record/senddata.gif" width="300">
+
+Sumber:\
+[Asset and Image](https://flutter.dev/docs/development/ui/assets-and-images)\
+[Cookbook Navigation](https://flutter.dev/docs/cookbook#navigation)

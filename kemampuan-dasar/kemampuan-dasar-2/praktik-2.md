@@ -67,19 +67,21 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To github.com:Fourthten/rhymes.git
    43582f1..3b64f49  master -> master
 ```
-### Organization 
+### Organization github
 ![Organization](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/organization.png)
 ### Fork 
+Salinan proyek untuk membuat proyek terpisah.
 ![Fork](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/fork.png)
-### Issue 
+### Issue github
 ![Issue](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/issue.png)
-### Team 
+### Team github
 ![Team](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/team.png)
-### Collaborators 
+### Collaborators github
 ![Collaborators](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/collaborators.png)
 ### Trello
+Manajemen tugas proyek
 ![Trello](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/Trello.PNG)
-### Webhook
+### Webhook github
 ![Webhooks](https://github.com/Fourthten/praxis-academy/blob/master/kemampuan-dasar/kemampuan-dasar-2/Repo%20Rhymes/images/Webhook.PNG)
 
 

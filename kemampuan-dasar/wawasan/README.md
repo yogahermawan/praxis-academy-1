@@ -12,3 +12,13 @@ Pola proses <i>scrum</i> yaitu <i>backlog, sprint, scrum meeting, demos</i>.
 <i>Extreme Programming</i> merupakan metode pengembangan perangkat lunak dari pendekatan <i>agile</i> berdasarkan <i>communication, simplicity, feedback, courage, respect</i>. 
 Proses <i>Extreme Programming</i> ( XP ) terdiri dari <i>planning, design, coding, testing</i>.
 </p>
+
+Sumber:\
+[Wikipedia - Information Technology](https://en.wikipedia.org/wiki/Information_technology)\
+[Wikipedia - Software](https://en.wikipedia.org/wiki/Software)\
+[Different Informatics and Computer Science](https://cs.stackexchange.com/questions/81408/whats-the-difference-between-computer-science-and-informatics)\
+[Wikipedia - Software Development](https://en.wikipedia.org/wiki/Software_development)\
+[Wikipedia - Software Engineering](https://en.wikipedia.org/wiki/Software_engineering)\
+[Wikipedia - Agile Software Development](https://en.wikipedia.org/wiki/Agile_software_development)\
+[Wikipedia - Scrum](https://en.wikipedia.org/wiki/Scrum_(software_development))\
+[Wikipedia - Extreme Programming](https://en.wikipedia.org/wiki/Extreme_programming)

@@ -156,3 +156,7 @@ Untuk membuat sample project jalankan perintah `flutter create --sample=widgets.
 File [signupnavigator.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/kasus/signupnavigator.dart)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-03/kasus/record/navigatesignup.gif" width="300">
+
+Sumber:\
+[Launch Screen and App Icon](https://flutter.dev/docs/development/ui/assets-and-images)\
+[Navigator](https://api.flutter.dev/flutter/widgets/Navigator-class.html)

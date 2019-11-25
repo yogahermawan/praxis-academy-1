@@ -1,3 +1,25 @@
+### Imperatif deklaratif
+Flutter bersifat deklaratif yang membangun UI untuk mencerminkan kondisi aplikasi saat ini.\
+Imperatif\
+Pergi ke ViewB mengambil b dengan selector atau findViewById dan meminta mutasi padanya.
+```
+// Imperative style
+b.setColor(red)
+b.clearChildren()
+ViewC c3 = new ViewC(...)
+b.add(c3)
+```
+Deklaratif\
+Konfigurasi tampilan widget tidak dapat diubah dan hanya blueprint. 
+Untuk mengubah UI, widget memicu membangun kembali dengan sendirinya 
+(panggil setState() di StatefulWidgets) dan membuat subtree widget baru.
+```
+// Declarative style
+return ViewB(
+  color: red,
+  child: ViewC(...),
+)
+```
 ## Simple provider
 ChangeNotifier adalah kelas sederhana yang menyediakan notifikasi perubahan kepada listeners. 
 Jika sesuatu seperti ChangeNotifier dapat subscribe untuk perubahannya. 
@@ -25,15 +47,15 @@ dependencies:
     sdk: flutter
   provider: ^3.0.0
 ```
-import package provider `import 'package:provider/provider.dart';`
-3. Tambahkan font `fonts\Corben` di folder proyek, source: []()
-4. Tambahkan common, models, screens, main.dart pada folder lib, source: []()
+import package provider `import 'package:provider/provider.dart';`\
+3. Tambahkan font `Corben` di folder proyek, source: [Corben](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan/fonts/Corben)\
+4. Tambahkan common, models, screens, main.dart pada folder lib, source: [lib](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan/lib_shopper)\
 `common\theme.dart` digunakan untuk mengidentifikasi tema pada aplikasi.\
 `screens` digunakan sebagai tampilan layar aplikasi. 
 Dengan `Provider.of`, memiliki akses ke kelas model sebagai state saat ini.\
 `models` berisi kelas model digunakan sebagai akses data pada aplikasi.
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/record/shopper.gif" width="300">
 
 ### Provider Counter
 1. Buat proyek baru dengan nama `provider_counter`
@@ -44,6 +66,7 @@ dependencies:
     sdk: flutter
   provider: ^3.0.0
 ```
-import package provider `import 'package:provider/provider.dart';`
-3. Edit `lib\main.dart` []()
-![]()
+import package provider `import 'package:provider/provider.dart';`\
+3. Edit `lib\main.dart` source: [main.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/counter.dart)\
+File ![counter](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/images/counter.PNG)
+

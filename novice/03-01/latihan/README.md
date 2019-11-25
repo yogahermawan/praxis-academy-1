@@ -68,5 +68,20 @@ dependencies:
 ```
 import package provider `import 'package:provider/provider.dart';`\
 3. Edit `lib\main.dart` source: [main.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/counter.dart)\
-File ![counter](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/images/counter.PNG)
+![counter](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/images/counter.PNG)
+### Business Logic Component
+Buat proyek baru `bloc_update_tutorial`
+Tambahkan bloc library di pubspec.yaml. 
+Equatable untuk menyederhanakan perbandingan nilai Dart,
+```
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^0.15.1
+  equatable: ^0.2.6
+```
+simple UI weather `lib\main.dart`. source: []()\
+Klik kanan folder `lib`, pilih `Bloc: New Bloc`, beri nama `weather`, pilih `Yes`\
+copy source ini: [lib]()
 
+<img src="" width="">

@@ -1,4 +1,4 @@
-### Imperatif deklaratif
+### Imperatif Deklaratif
 Flutter bersifat deklaratif yang membangun UI untuk mencerminkan kondisi aplikasi saat ini.\
 Imperatif\
 Pergi ke ViewB mengambil b dengan selector atau findViewById dan meminta mutasi padanya.
@@ -70,7 +70,7 @@ import package provider `import 'package:provider/provider.dart';`\
 3. Edit `lib\main.dart` source: [main.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/counter.dart)\
 ![counter](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/images/counter.PNG)
 ### Business Logic Component
-Buat proyek baru `bloc_update_tutorial`
+Buat proyek baru `bloc_update_tutorial`\
 Tambahkan bloc library di pubspec.yaml. 
 Equatable untuk menyederhanakan perbandingan nilai Dart,
 ```
@@ -80,8 +80,11 @@ dependencies:
   flutter_bloc: ^0.15.1
   equatable: ^0.2.6
 ```
-simple UI weather `lib\main.dart`. source: []()\
+simple UI weather `lib\main.dart`. source: [simpleweather.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/simpleweather.dart)\
+Menggunakan bloc:\
 Klik kanan folder `lib`, pilih `Bloc: New Bloc`, beri nama `weather`, pilih `Yes`\
-copy source ini: [lib]()
+Kemudian copy source ini: [lib](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan/lib_weather)
 
-<img src="" width="">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/record/weather.gif" width="300">
+
+

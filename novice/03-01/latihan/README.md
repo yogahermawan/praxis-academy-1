@@ -35,7 +35,7 @@ Dengan `Provider.of`, memiliki akses ke kelas model sebagai state saat ini.\
 
 <img src="" width="300">
 
-### Provider
+### Provider Counter
 1. Buat proyek baru dengan nama `provider_counter`
 2. Tambahkan di pubspec.yaml
 ```
@@ -45,4 +45,5 @@ dependencies:
   provider: ^3.0.0
 ```
 import package provider `import 'package:provider/provider.dart';`
-3. 
+3. Edit `lib\main.dart` []()
+![]()

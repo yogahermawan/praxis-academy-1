@@ -20,6 +20,7 @@ return ViewB(
   child: ViewC(...),
 )
 ```
+Ephemeral state untuk single widget, app state untuk banyak/beberapa widget.
 ## Simple provider
 ChangeNotifier adalah kelas sederhana yang menyediakan notifikasi perubahan kepada listeners. 
 Jika sesuatu seperti ChangeNotifier dapat subscribe untuk perubahannya. 
@@ -83,7 +84,16 @@ dependencies:
 simple UI weather `lib\main.dart`. source: [simpleweather.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/simpleweather.dart)\
 Menggunakan bloc:\
 Klik kanan folder `lib`, pilih `Bloc: New Bloc`, beri nama `weather`, pilih `Yes`\
-Kemudian copy source ini: [lib](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan/lib_weather)
+Kemudian copy source ini: [lib](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan/lib_weather)\
+File `bloc.dart` untuk mengekspor _bloc, _event, _state yang nantinya di import pada file `main.dart`. 
+Model berisi kelas weather yang akan di import pada file `main.dart`. 
+Widget MyApp memanggil widget WeatherPage sebagai home dari MaterialApp, yang memiliki State _WeatherPageState. 
+Di build _WeatherPageState memiliki BlocProvider sebagai body. 
+BlocProvider merupakan InheritedWidget yang dibuat khusus untuk meneruskan Blocs ke widget tree. 
+Untuk mengatasi instance WeatherBloc(_WeatherPageState) dan TextField(CityInputField) yang terpisah. 
+BlocProvider di dalamnya memiliki child Container untuk style tampilan yang berisi 
+child BlocListener untuk mengeksekusi setiap perubahan dan mencetak perubahan(print). 
+Di dalamnya berisi BlocBuilder untuk membangun kembali widget ketika state di pancarkan/kirim.
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/record/weather.gif" width="300">
 

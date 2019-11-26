@@ -18,7 +18,6 @@ var data = JSON.encode({
 });
 // data == '{"framework":"Flutter","tags":["flutter","snippets"],"versions":"0.0.20","task":13511}'
 ```
-contoh simple json [ListView with JSON or List Data]()
 Tambahkan dependencies `http: ^0.12.0+2`\
 Buat permintaan network
 ```
@@ -72,8 +71,7 @@ Future<List<Photo>> fetchPhotos(http.Client client) async {
   return compute(parsePhotos, response.body);
 }
 ```
-File []()
-
-<img src="" width="">
+File [photojson.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-02/latihan/photojson.dart)\
+![photo](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-02/latihan/images/photojson.PNG)
 
 

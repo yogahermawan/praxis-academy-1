@@ -24,18 +24,30 @@ Animasi Simultan, contoh menggunakan multiple tween pada animation controller ya
 Basic struktur hero animasi, implementasinya satu mendeskripsi widget route sumber dan lain mendeskripsi widget route tujuan. 
 Strukturnya, tentukan awal dan akhir widget Hero, buat route berisi hero tujuan, memicu animasi dengan push route tujuan pada navigator stack.\
 Simple Hero Animasi, File [simplehero.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/simplehero.dart), 
-tambah folder [images](https://github.com/Fourthten/praxis-academy/tree/master/novice/02-04/latihan/imagesstandar)
+tambah folder [images](https://github.com/Fourthten/praxis-academy/tree/master/novice/02-04/latihan/imagesstandar), pubspec.yaml:
 ```
 assets:
     - images/flippers-alpha.png
 ```
 import package scheduler(timeDilation) untuk kecepatan animasi dan material. runApp panggil widget HeroAnimation berisi Scaffold. 
 Scaffold body panggil widget PhotoHero dengan parameter photo, width, onTap. onTap menavigasi ke layar kedua berisi Scaffold dengan style body berbeda. 
-body layar kedua call PhotoHero dengan parameter photo, width, onTap juga. onTap kembali ke layar pertama. Widget PhotoHero untuk mengatur style foto.
+body layar kedua call PhotoHero dengan parameter photo, width, onTap juga. onTap kembali ke layar pertama. Widget PhotoHero untuk mengatur style foto. 
+InkWell membangun rute baru dan push ke stack navigator.
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/record/standarhero.gif" width="300">
 
-Radial hero animasi, 
+Radial hero animasi, melebarkan gambar dari radius min ke max. File [radialhero.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/radialhero.dart), 
+tambah folder [images](https://github.com/Fourthten/praxis-academy/tree/master/novice/02-04/latihan/imagesradial), pubspec.yaml:
+```
+assets:
+    - images/beachball-alpha.png
+    - images/binoculars-alpha.png
+    - images/chair-alpha.png
+```
+import math, material, scheduler(timeDilation), runApp widget RadialExpansionDemo yang berisi 3 gambar pada body Scaffold. masing-masing gambar memiliki _buildHero yang berisi widget RadialExpansion(control radial) dan Photo(style photo). 
+onTap menavigasi ke _buildPage yang berisi widget RadialExpansion(control radial) dan Photo(style photo) juga serta onTap untuk menavigasi ke halaman sebelumnya.
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/record/radialhero.gif" width="300">
 
 Sumber:\
 [Tutorial Animasi](https://flutter.dev/docs/development/ui/animations/tutorial)\

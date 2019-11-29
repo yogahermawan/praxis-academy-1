@@ -20,6 +20,15 @@ Animasi Simultan, contoh menggunakan multiple tween pada animation controller ya
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/record/simultananimate.gif" width="300">
 
+### Hero Animasi
+Basic struktur hero animasi, implementasinya satu mendeskripsi widget route sumber dan lain mendeskripsi widget route tujuan. 
+Strukturnya, tentukan awal dan akhir widget Hero, buat route berisi hero tujuan, memicu animasi dengan push route tujuan pada navigator stack.\
+Simple Hero Animasi, File [](), 
+folder images !()[]\
+import package scheduler(timeDilation) dan material. runApp panggil widget HeroAnimation,
+![]()
+
+
 Sumber:\
 [Tutorial Animasi](https://flutter.dev/docs/development/ui/animations/tutorial)\
 [Hero Animations](https://flutter.dev/docs/development/ui/animations/hero-animations)\

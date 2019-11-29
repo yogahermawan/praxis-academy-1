@@ -51,8 +51,7 @@ onTap menavigasi ke `_buildPage` yang berisi widget `RadialExpansion`(control ra
 
 ### Staggered animasi
 Perubahan visual terjadi secara berurutan atau berangkaian.\
-Basic staggered animasi, File [](). 
-
+Basic staggered animasi, File [basicstaggered.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/basicstaggered.dart).\
 import async, material, scheduler. runApp call `StaggerDemo` dengan State `_StaggerDemoState` yang menampilkan kotak pada layar. 
 onTap di dalamnya menjalankan fungsi `_playAnimation` yang meneruskan dan mengembalikan animasi `_controller`. 
 Di dalam widget tersebut berisi widget `StaggerAnimation` yang dijalankan oleh ``_controller`. 
@@ -60,7 +59,7 @@ Di dalam widget tersebut berisi widget `StaggerAnimation` yang dijalankan oleh `
 height 50.0 - 150.0 (curve 0.250 - 0.375), padding bottom 16.0 - 75.0 (curve 0.250 - 0.375), borderRadius circular 4.0 - 75.0 (curve 0.375 - 0.500), 
 ColorTween biru ke jingga (curve 0.500 - 0.750).
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/record/staggered.gif" width="300">
 
 Sumber:\
 [Tutorial Animasi](https://flutter.dev/docs/development/ui/animations/tutorial)\

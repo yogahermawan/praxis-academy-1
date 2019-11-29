@@ -23,8 +23,8 @@ Animasi Simultan, contoh menggunakan multiple tween pada animation controller ya
 ### Hero Animasi
 Basic struktur hero animasi, implementasinya satu mendeskripsi widget route sumber dan lain mendeskripsi widget route tujuan. 
 Strukturnya, tentukan awal dan akhir widget Hero, buat route berisi hero tujuan, memicu animasi dengan push route tujuan pada navigator stack.\
-Simple Hero Animasi, File [](), 
-tambah folder images !()[]
+Simple Hero Animasi, File [simplehero.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/simplehero.dart), 
+tambah folder [images](https://github.com/Fourthten/praxis-academy/tree/master/novice/02-04/latihan/imagesstandar)
 ```
 assets:
     - images/flippers-alpha.png
@@ -32,7 +32,7 @@ assets:
 import package scheduler(timeDilation) untuk kecepatan animasi dan material. runApp panggil widget HeroAnimation berisi Scaffold. 
 Scaffold body panggil widget PhotoHero dengan parameter photo, width, onTap. onTap menavigasi ke layar kedua berisi Scaffold dengan style body berbeda. 
 body layar kedua call PhotoHero dengan parameter photo, width, onTap juga. onTap kembali ke layar pertama. Widget PhotoHero untuk mengatur style foto.\
-![]()
+![simplehero](https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/record/standarhero.gif)
 
 
 Sumber:\

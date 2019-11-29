@@ -31,8 +31,10 @@ assets:
 ```
 import package scheduler(timeDilation) untuk kecepatan animasi dan material. runApp panggil widget HeroAnimation berisi Scaffold. 
 Scaffold body panggil widget PhotoHero dengan parameter photo, width, onTap. onTap menavigasi ke layar kedua berisi Scaffold dengan style body berbeda. 
-body layar kedua call PhotoHero dengan parameter photo, width, onTap juga. onTap kembali ke layar pertama. Widget PhotoHero untuk mengatur style foto.\
+body layar kedua call PhotoHero dengan parameter photo, width, onTap juga. onTap kembali ke layar pertama. Widget PhotoHero untuk mengatur style foto.
+
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/record/standarhero.gif" width="300">
+
 Radial hero animasi, 
 
 Sumber:\

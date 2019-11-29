@@ -29,9 +29,9 @@ tambah folder [images](https://github.com/Fourthten/praxis-academy/tree/master/n
 assets:
     - images/flippers-alpha.png
 ```
-import package scheduler(timeDilation) untuk kecepatan animasi dan material. runApp panggil widget HeroAnimation berisi Scaffold. 
-Scaffold body panggil widget PhotoHero dengan parameter photo, width, onTap. onTap menavigasi ke layar kedua berisi Scaffold dengan style body berbeda. 
-body layar kedua call PhotoHero dengan parameter photo, width, onTap juga. onTap kembali ke layar pertama. Widget PhotoHero untuk mengatur style foto. 
+import package scheduler(timeDilation) untuk kecepatan animasi dan material. runApp panggil widget `HeroAnimation` berisi Scaffold. 
+Scaffold body panggil widget `PhotoHero` dengan parameter photo, width, onTap. onTap menavigasi ke layar kedua berisi Scaffold dengan style body berbeda. 
+body layar kedua call PhotoHero dengan parameter photo, width, onTap juga. onTap kembali ke layar pertama. Widget `PhotoHero` untuk mengatur style foto. 
 InkWell membangun rute baru dan push ke stack navigator.
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/record/standarhero.gif" width="300">
@@ -44,10 +44,23 @@ assets:
     - images/binoculars-alpha.png
     - images/chair-alpha.png
 ```
-import math, material, scheduler(timeDilation), runApp widget RadialExpansionDemo yang berisi 3 gambar pada body Scaffold. masing-masing gambar memiliki _buildHero yang berisi widget RadialExpansion(control radial) dan Photo(style photo). 
-onTap menavigasi ke _buildPage yang berisi widget RadialExpansion(control radial) dan Photo(style photo) juga serta onTap untuk menavigasi ke halaman sebelumnya.
+import math, material, scheduler(timeDilation), runApp widget `RadialExpansionDemo` yang berisi 3 gambar pada body Scaffold. masing-masing gambar memiliki `_buildHero` yang berisi widget `RadialExpansion`(control radial) dan `Photo`(style photo). 
+onTap menavigasi ke `_buildPage` yang berisi widget `RadialExpansion`(control radial) dan `Photo`(style photo) juga serta onTap untuk menavigasi ke halaman sebelumnya.
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/02-04/latihan/record/radialhero.gif" width="300">
+
+### Staggered animasi
+Perubahan visual terjadi secara berurutan atau berangkaian.\
+Basic staggered animasi, File [](). 
+
+import async, material, scheduler. runApp call `StaggerDemo` dengan State `_StaggerDemoState` yang menampilkan kotak pada layar. 
+onTap di dalamnya menjalankan fungsi `_playAnimation` yang meneruskan dan mengembalikan animasi `_controller`. 
+Di dalam widget tersebut berisi widget `StaggerAnimation` yang dijalankan oleh ``_controller`. 
+`StaggerAnimation` mengatur animasi, dimulai dari opacity 0.0 - 1.0 (curve 0.0 - 0.100), width 0.50 - 0.150 (curve 0.125 - 0.250), 
+height 50.0 - 150.0 (curve 0.250 - 0.375), padding bottom 16.0 - 75.0 (curve 0.250 - 0.375), borderRadius circular 4.0 - 75.0 (curve 0.375 - 0.500), 
+ColorTween biru ke jingga (curve 0.500 - 0.750).
+
+<img src="" width="300">
 
 Sumber:\
 [Tutorial Animasi](https://flutter.dev/docs/development/ui/animations/tutorial)\

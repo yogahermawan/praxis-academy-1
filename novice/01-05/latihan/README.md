@@ -14,10 +14,11 @@ File [streams.dart](https://github.com/Fourthten/praxis-academy/blob/master/novi
 Contoh error handling [trycatchstream.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-05/latihan/trycatchstream.dart).\
 Dart Native(ust-in-time (JIT) virtual machine (VM) ahead-of-time (AOT)) untuk mobile, desktop, server. Dart Web untuk web. Dart Native memungkinkan menjalankan kode Dart yang dikompilasi dengan kode mesin ARM atau X64 untuk aplikasi mobile, desktop, dan server.\
 Dart Efektif dengan 2 tema menyeluruh, konsisten dan singkat. 
+Isolates yaitu tempat semua kode Dart berjalan. Konkurensi adalah landasan umum perancangan dimana proses-proses terjadi secara bersamaan. 
 Istilah Kontruksi Dart terdiri dari Member library yaitu top-level field, getter, setter, function di tingkat atas yang bukan tipe.
 Member class yaitu constructor, field, getter, setter, function, operator dan dapat berupa instance atau statis, abstrak atau konkret yang dideklarasikan di dalam class. 
 Member yaitu anggota library atau class. Variabel yaitu variabel top-level, parameter, local variabel. 
-Type yaitu deklarasi tipe apapun, class, typedef atau enum. Property yaitu variabel top-level, getter setter, field(instance atau static).
+Type yaitu deklarasi tipe apapun, class, typedef atau enum. Property yaitu variabel top-level, getter setter, field(instance atau static). 
 
 Sumber:\
 [Contoh Async Await](https://codingwithjoe.com/dart-fundamentals-async-await/)\

@@ -10,3 +10,9 @@
 - 02-03: Assets dan Navigasi
 - 02-04: Animasi
 - 02-05: UI Lanjut - Slivers dan Gestures**
+### Minggu 03
+- 03-01: Pengelolaan State
+- 03-02: Serialisasi JSON
+- 03-03: Mengakses Back End as a Service Menggunakan Firebase
+- 03-04: Aksesibilitas
+- 03-05: Internasionalisasi Aplikasi

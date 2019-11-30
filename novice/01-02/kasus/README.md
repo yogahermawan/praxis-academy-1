@@ -17,4 +17,4 @@ Diberikan array T integer yang diurutkan.
 Contoh [index_equal_value.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-02/kasus/index_equal_value.dart)
 
 Sumber:\
-https://devinpractice.com/2017/10/22/algorithms-basic-exercises-part-1/
+[Pseudocode](https://devinpractice.com/2017/10/22/algorithms-basic-exercises-part-1/)

@@ -36,12 +36,4 @@ void main() {
 
   var result = fibonacci(20);*/
   flybyObjects.where((name) => name.contains('turn')).forEach(print);
-  // This is a normal, one-line comment.
-
-  /// This is a documentation comment, used to document libraries,
-  /// classes, and their members. Tools like IDEs and dartdoc treat
-  /// doc comments specially.
-
-  /* Comments like these are also supported. */
-  // Importing core libraries
 }

@@ -1,7 +1,7 @@
 // Importing core libraries
 import 'dart:math';
 
-/*class Position {
+class Position {
   // properties
   int x;
   int y;
@@ -24,10 +24,4 @@ main() {
     ..y = 6;
 
   print(origin.distanceTo(p));
-}*/
-
-// Importing libraries from external packages
-//import 'package:test/test.dart';
-
-// Importing files
-//import 'path/to/my_other_file.dart';
+}

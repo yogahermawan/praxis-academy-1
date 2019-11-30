@@ -1,4 +1,13 @@
-A sample command-line application.
+Install stagehand `pub global activate stagehand`, untuk update `pub global activate`\
+Buat stagehand dart `console-full`
+```
+>mkdir kasus
+>cd kasus
+>stagehand console-full
+>pub get
+```
+Jalankan `dart bin/main.dart` maka akan muncul "Hello, world: 42!". 
+Buat dasar dart pada stagehand, Contoh [file dart]().
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+Sumber:\
+[Stagehand](https://pub.dev/packages/stagehand)

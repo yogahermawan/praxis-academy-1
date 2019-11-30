@@ -1,3 +1,7 @@
+### Install SDK dan IDE Dart
+Install [Dart sdk windows](https://dart.dev/get-dart)\
+Setting environment path dart sdk\
+Install [Android Studio](https://developer.android.com/studio) dan [VS Code](https://code.visualstudio.com/)
 ### Hello World
 ```
 void main() {
@@ -80,7 +84,8 @@ Mencari `name` dari variabel `flybyObjects` dimana memiliki kata 'turn' kemudian
 /* Comments like these are also supported. */
 ```
 **note**\
-Memberi komentar dokumentasi.
+Memberi komentar dokumentasi.\
+File [sample.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-01/latihan/sample.dart)
 
 ### Imports
 ```
@@ -94,4 +99,9 @@ import 'package:test/test.dart';
 import 'path/to/my_other_file.dart';
 ```
 **note**\
-*access libraries dart*.
+*access libraries dart*. [import.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-01/latihan/import.dart)
+
+Sumber:\
+[Dart Tool](https://dart.dev/tools)\
+[Dart SDK](https://dart.dev/get-dart)\
+[Dasar Dart](https://dart.dev/samples)

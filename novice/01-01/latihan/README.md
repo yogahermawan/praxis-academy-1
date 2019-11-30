@@ -99,7 +99,7 @@ import 'package:test/test.dart';
 import 'path/to/my_other_file.dart';
 ```
 **note**\
-*access libraries dart*. [import.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-01/latihan/import.dart) 
+*access libraries dart*. File [import.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-01/latihan/import.dart) 
 atau [importdart](https://github.com/Fourthten/praxis-academy/tree/master/novice/01-01/latihan/importdart)
 
 Sumber:\

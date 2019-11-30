@@ -15,7 +15,7 @@ Metode setter mengambil parameter dan memberikan ke variabel.
 Contoh [gettersetter.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-03/latihan/gettersetter.dart)
 ### Method
 Adalah fungsi yang menyediakan perilaku obyek. Method merupakan suatu operasi berupa fungsi-fungsi yang dapat dikerjakan oleh suatu obyek.
-Contoh [method.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-03/latihan/method.dart).\
+Contoh [method.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-03/latihan/method.dart)
 ### Abstract Method dan Class
 Abstract Method adalah method yang diimplementasikan ulang di dalam child class. 
 Abstract method ditulis tanpa isi dari method. 
@@ -31,7 +31,7 @@ class InheritanceAbstrak extends Abstrak {
 ```
 ### Implicit Interface
 Implicit Interface adalah class yang hanya mengandung deklarasi method tanpa memiliki implementasu dan semua properti yang dimilikinya bersifat final. 
-Contoh []()
+Contoh [implicitinterface.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-03/latihan/implicitinterface.dart)
 ### Extend Class
 Untuk membuat subclass inheritance. Contoh [extends.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-03/latihan/extends.dart)
 ### Mixin
@@ -40,3 +40,4 @@ Berisi method untuk digunakan oleh kelas lain tanpa harus menjadi parent class d
 Contoh [mixin.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/01-03/latihan/mixin.dart)
 
 Sumber:\
+[Dart Language Tour](https://dart.dev/guides/language/language-tour#adding-features-to-a-class-mixins)

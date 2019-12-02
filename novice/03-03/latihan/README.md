@@ -52,13 +52,18 @@ apply plugin: 'com.google.gms.google-services'
 ```
 ### Simple Baby Name App
 Buat proyek flutter dengan nama `baby_names`
-Buat UI [main.dart]()\
-![]()\
+Buat UI [uibaby.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/latihan/uibaby.dart)\
+![ui_baby](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/latihan/images/ui_babyname.PNG)\
 Koneksikan Flutter dengan Firebase seperti tutorial di atas\
 Pada console firebase pilih menu database>cloud firestore\
 Pada security rules cloud firestore pilih test mode enable sehingga read/write public\
+```
+match /{document=**} {
+  allow read, write;
+}
+```
 Buat Collection baby dan document seperti berikut:\
-![]()\
+![collection](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/latihan/images/babyname.PNG)\
 Tambahkan document baby lain seperti filip, richard, dll.\
 Ubah `_buildBody` untuk call cloud firestore
 ```
@@ -103,6 +108,10 @@ onTap: () => Firestore.instance.runTransaction((transaction) async {
 ```
 Jika 2 orang vote bersamaan, vote berubah diantara get dan update 
 maka proses saat ini tidak dilakukan dan mengulang transaction jika gagal maksimal sampai 5 kali.\
-File []()
+File [babynamesfirestore.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/latihan/babynamesfirestore.dart)
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/latihan/record/babynamevoute.gif" width="300">
+
+Sumber:\
+[Add Firebase to your Flutter app](https://firebase.google.com/docs/flutter/setup?platform=android)\
+[Codelabs](https://codelabs.developers.google.com/codelabs/flutter-firebase/#4)

@@ -74,4 +74,7 @@ Future<List<Photo>> fetchPhotos(http.Client client) async {
 File [photojson.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-02/latihan/photojson.dart)\
 ![photo](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-02/latihan/images/photojson.PNG)
 
+Sumber:\
+[Parse JSON in the background](https://flutter.dev/docs/cookbook/networking/background-parsing)
+
 

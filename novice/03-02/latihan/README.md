@@ -76,5 +76,3 @@ File [photojson.dart](https://github.com/Fourthten/praxis-academy/blob/master/no
 
 Sumber:\
 [Parse JSON in the background](https://flutter.dev/docs/cookbook/networking/background-parsing)
-
-

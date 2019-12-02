@@ -16,4 +16,3 @@ Sumber:\
 [JSON and serialization](https://flutter.dev/docs/development/data-and-backend/json)\
 [Simple JSON with Flutter](https://flutter.institute/simple-json-with-flutter/)\
 [ListView with JSON or List Data](https://kodestat.gitbook.io/flutter/flutter-listview-with-json-or-list-data)
-

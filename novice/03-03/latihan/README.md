@@ -56,7 +56,7 @@ Buat UI [uibaby.dart](https://github.com/Fourthten/praxis-academy/blob/master/no
 ![ui_baby](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/latihan/images/ui_babyname.PNG)\
 Koneksikan Flutter dengan Firebase seperti tutorial di atas\
 Pada console firebase pilih menu database>cloud firestore\
-Pada security rules cloud firestore pilih test mode enable sehingga read/write public\
+Pada security rules cloud firestore pilih test mode enable sehingga read/write public
 ```
 match /{document=**} {
   allow read, write;

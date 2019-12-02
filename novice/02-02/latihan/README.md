@@ -769,8 +769,3 @@ Sumber:\
 [Introduction to Widget](https://flutter.dev/docs/development/ui/widgets-intro)\
 [Layout in Flutter](https://flutter.dev/docs/development/ui/layout)\
 [Adding Interactivity](https://flutter.dev/docs/development/ui/interactive)
-
-
-
-
-

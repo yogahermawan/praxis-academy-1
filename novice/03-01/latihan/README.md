@@ -69,6 +69,8 @@ dependencies:
 ```
 import package provider `import 'package:provider/provider.dart';`\
 3. Edit `lib\main.dart` source: [main.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/counter.dart)\
+Gunakan `ChangeNotifierProvider` dengan builder `Counter`. Tampilan aplikasi menggunakan widget MyHomePage. 
+`Consumer` untuk menampilkan data yang didapat. `Provider.of` untuk menjalakan method pada class Counter.\
 ![counter](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/images/counter.PNG)
 ### Business Logic Component
 Buat proyek baru `bloc_update_tutorial`\
@@ -97,4 +99,6 @@ Di dalamnya berisi BlocBuilder untuk membangun kembali widget ketika state di pa
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/record/weather.gif" width="300">
 
-
+Sumber:\
+[Provider](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple)\
+[BLoC](https://resocoder.com/2019/06/12/bloc-library-updated-painless-state-management-for-flutter/)

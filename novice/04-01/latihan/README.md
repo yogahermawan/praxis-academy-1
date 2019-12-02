@@ -2,7 +2,7 @@
 Untuk dukungan platform API khusus, Flutter mengirim pesan ke host (IOS atau Android) melalui channel platform. 
 Host mendengarkan pada channel platform dan menerima pesan. Lalu panggil platform API khusus menggunakan bahasa pemrograman native dan kirim respon kembali ke klien (Flutter).\
 MethodChannel API (Android) memungkinkan mengirim pesan yang sesuai dengan panggilan method. 
-FlutterMethodChannel (API) memungkinkan menerima panggilan method dan mengirim kembali hasilnya.\
+FlutterMethodChannel (API) memungkinkan menerima panggilan method dan mengirim kembali hasilnya.
 ### Calling platform-specific Android code using platform channels
 Buat projek baru batterylevel `flutter create batterylevel`\
 Buat Flutter klien
@@ -103,27 +103,27 @@ class MainActivity: FlutterActivity() {
 }
 ```
 import method channel, buat MethodChannel dan panggil setMethodCallHandler yang berisi method getBatteryLevel.
-File [batterylevel]()\
-![]()
+File [batterylevel](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-01/latihan/batterylevel)\
+![battery](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-01/latihan/images/battery.PNG)
 ### Platform channel in Flutter between Dart and Native Code
 Pesan dan respon diteruskan secara asynchronous dan UI tetap responsif. 
 Buat proyek flutter,\
-Buat Platform channel
+Buat Platform channel dengan `MethodChannel`
 ```
 class _MyHomePageState extends State<MyHomePage> {
   static const platform = const MethodChannel('flutter.native/helper');
 ```
-Panggil method pada platform channel
+Panggil method pada platform channel dengan `invokeMethod`
 ```
 String response = "";
   try {
-    final String result = await  platform.invokeMethod('helloFromNativeCode');
+    final String result = await platform.invokeMethod('helloFromNativeCode');
     response = result;
   } on PlatformException catch (e) {
     response = "Failed to Invoke: '${e.message}'.";
   }
 ```
-Pada MainActivity.java buat implementasi method java
+Pada MainActivity.java buat implementasi methodchannel java
 ```
 new MethodChannel(getFlutterView(), CHANNEL).setMethodCallHandler(
     new MethodChannel.MethodCallHandler() {
@@ -135,10 +135,10 @@ new MethodChannel(getFlutterView(), CHANNEL).setMethodCallHandler(
         }
 }});
 ```
-File []()\
-![]()
+File [nativedart](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-01/latihan/nativedart)\
+![nativedart](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-01/latihan/images/nativedart.PNG)
 
 Sumber:\
 [Writing custom platform-specific code](https://flutter.dev/docs/development/platform-integration/platform-channels)\
-[Platform channel in Flutter between Dart and Native Code](https://medium.com/47billion/creating-a-bridge-in-flutter-between-dart-and-native-code-in-java-or-objectivec-5f80fd0cd713)\
+[Platform Channel in Flutter between Dart and Native Code](https://medium.com/47billion/creating-a-bridge-in-flutter-between-dart-and-native-code-in-java-or-objectivec-5f80fd0cd713)\
 [Platform Channel](https://github.com/flutter/flutter/tree/master/examples/platform_channel)

@@ -37,12 +37,16 @@ dependencies:
 ```
 Contoh menggunakan paket css_colors,
 Buat projek, tambah dependencies `css_colors: ^1.0.0`, jalankan `flutter pub get`. 
-Copy file [csscolor.dart](), 
-Widget MyApp memiliki Widget DemoPage berisi Scaffold dengan body menampilkan warna jingga. 
-![]()\
+Copy file [csscolor.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-02/latihan/csscolor.dart), 
+Widget MyApp memiliki Widget DemoPage berisi Scaffold dengan body menampilkan warna jingga.\
+![csscolor](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-02/latihan/images/csscolor.PNG)\
 Contoh menggunakan paket url_launcher untuk meluncurkan browser, 
 Buat projek, tambah dependencies `url_launcher: ^5.2.7`, jalankan `flutter pub get`, stop dan restart app jika sedang berjalan. 
-Copy file [urllauncher.dart](), 
+Copy file [urllauncher.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-02/latihan/urllauncher.dart), 
 Widget MyApp memiliki Widget DemoPage berisi Scaffold dengan RaisedButton yang apabila di klik maka panggil launchURL untuk meluncurkan default browser yang membuka laman `https://flutter.dev` 
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/04-02/latihan/record/urllauncher.gif" width="300">
+
+Sumber:\
+[Using Packages](https://flutter.dev/docs/development/packages-and-plugins/using-packages)\
+[Develop Packages](https://flutter.dev/docs/development/packages-and-plugins/developing-packages)

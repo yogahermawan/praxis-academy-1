@@ -58,7 +58,8 @@ new MethodChannel(getFlutterView(), BATTERY_CHANNEL).setMethodCallHandler(
 ```
 Method `BroadcastReceiver` untuk cek status baterai saat ini dan method `getBatteryLevel` untuk mengetahui level baterai saat ini. 
 Lihat contoh file [batteryapp](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-01/kasus/batteryapp)\
-![statuslevel](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-01/kasus/images/statuslevel.png)
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/04-01/kasus/images/statuslevel.png" width="300">
 
 Sumber:\
 [Platform Channel](https://github.com/flutter/flutter/tree/master/examples/platform_channel)

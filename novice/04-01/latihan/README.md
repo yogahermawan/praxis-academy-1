@@ -140,5 +140,4 @@ File [nativedart](https://github.com/Fourthten/praxis-academy/tree/master/novice
 
 Sumber:\
 [Writing custom platform-specific code](https://flutter.dev/docs/development/platform-integration/platform-channels)\
-[Platform Channel in Flutter between Dart and Native Code](https://medium.com/47billion/creating-a-bridge-in-flutter-between-dart-and-native-code-in-java-or-objectivec-5f80fd0cd713)\
-[Platform Channel](https://github.com/flutter/flutter/tree/master/examples/platform_channel)
+[Platform Channel in Flutter between Dart and Native Code](https://medium.com/47billion/creating-a-bridge-in-flutter-between-dart-and-native-code-in-java-or-objectivec-5f80fd0cd713)

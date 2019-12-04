@@ -14,6 +14,28 @@ dependencies:
   collection: '^0.1.2' # caret syntax, similar dengan batasan jarak reguler
 ```
 Penjelasan [caret syntax](https://dart.dev/tools/pub/dependencies#caret-syntax). Untuk upgrade package ke versi baru dengan `flutter pub upgrade`.\
+Menentukan platform yang didukung plugin, versi flutter `1.10` ke bawah tidak mendukung platform map
+```
+plugin:
+    platforms: 
+      android: 
+        package: com.example.deviceinfo
+        pluginClass: DeviceinfoPlugin
+      ios: 
+        pluginClass: DeviceinfoPlugin
+```
+Menulis LICENSE yang baik
+```
+package_1
+
+<some license text>
+
+--------------------------------------------------------------------------------
+package_2
+
+<some license text>
+```
+Untuk publish package dengan `flutter pub publish`.\
 Path dependency
 ```
 dependencies:

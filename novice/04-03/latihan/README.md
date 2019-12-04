@@ -5,7 +5,9 @@ DevTools hanya support pada browser Google Chrome. Pilih tab [Flutter Inspector]
 pada DevTools untuk membuka inspektur aplikasi. Pada IDE berjalan secara default apabila menggunakan terminal gunakan `flutter run --track-widget-creation` 
 sehingga flutter inspector dapat menyajikan widget tree dalam cara yang sama bagaimana UI didefinisikan dalam kode. Buka DevTools di browser dengan `http://localhost:9100` 
 lalu masukkan port url aplikasinya misal `http://127.0.0.1:56440/ucN44DE3X-w=/`. 
-![]()\
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/04-03/latihan/images/devtools.PNG" width="600">
+
 Select widget mode untuk menampilkan detail tree; Performance overlay berisi grafik GPU dan CPU; Paint Baselines untuk render text garis dasar; Debug Paint untuk render display border, padding, alignment, and spacer; 
 logging untuk debug log; Slow Animations untuk inspeksi visual dengan memperlambat animasi; Repaint Rainbow menampilkan rotasi warna pada layar ketika di warna ulang. 
 Mengukur waktu startup aplikasi dengan `flutter run --trace-startup --profile`, profile mode tidak bisa dijalankan pada emulator dan simulator karena performa tidak real. 
@@ -20,7 +22,9 @@ hasil trace disimpan pada file `start_up_info.json` di dalam folder build.
 }
 ```
 Tracing ditampilkan secara timeline view. UI mengeksekusi kode Dart di Dart VM. GPU mengeksekusi kode grafis dari Flutter Engine.\
-![]()\
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/04-03/latihan/images/timeline.PNG" width="600">
+
 Build mode terdiri dari Debug mode, aplikasi diatur untuk debugging pada physical device, emulator, simulator. 
 Release mode, untuk menggunakan aplikasi saat menginginkan optimalisasi maksimum dan ukuran footprint minimal. 
 Profile mode, beberapa kemampuan debugging cukup untuk profil kinerja aplikasi.\

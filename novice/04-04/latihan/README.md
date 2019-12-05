@@ -1,8 +1,8 @@
-### Flavors
+### Membuat Flavors Android
 Produk flavor mirip dengan build type, dengan flavor dapat menentukan konfigurasi build dan mengubahnya sesuai keinginan. 
 Dengan flavor dapat membuat beberapa aplikasi dengan sumber kode yang sama namun berbeda konfigurasi. Contoh flavor,\
 Buat projek flutter `flutter create flavorsexample`\
-Buat aplikasi seperti kode dart berikut: []()
+Buat aplikasi seperti kode dart berikut: [FlutterApp](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/libfluterflavor)\
 Install flutter package
 ```
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
     sdk: flutter
   intl: ^0.15.7
 ```
-Tambahkan [image]() di `assets\`\
+Tambahkan [images](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/imageflavor) di folder `assets\`\
 Konfigurasi flavor di `android\app\build.gradle`
 ```
     defaultConfig { ... }
@@ -59,12 +59,45 @@ Tambahkan file strings.xml di `android/app/src/app2/res/values`
     <string name="app_name">App 2</string>
 </resources>
 ```
-Jalankan `flutter run --flavor app1` atau `flutter run --flavor app2`\
-![]()\
-Tambahkan Flavors, buat main_common, main_app1, main_app2 seperti ini []()\
+Jalankan `flutter run --flavor app1` atau `flutter run --flavor app2`. `flutter clean` untuk membersihkan cache.\
+![app](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/app1.PNG)\
+Tambahkan Flavors, buat main_common, main_app1, main_app2 untuk membedakan aplikasi. Kode seperti ini [flavorapp](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/libflavor)\
 app_config.dart untuk mengkonfigurasi nama tampilan aplikasi dan internal id aplikasi. 
 home_page.dart untuk menampilkan UI aplikasi. 
 Jalankan di terminal `flutter run --flavor app1 -t lib/main_app1.dart` atau 
 `flutter run --flavor app2 -t lib/main_app2.dart`\
-Custom beberapa sumber string dan assets pada flavor, Contoh fike []()\
+![flavor](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/flavorapp2.PNG)\
+Custom beberapa sumber string dan assets pada flavor, Contoh file [customflavor](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/libcustom)\
+app_config.dart untuk mengkonfigurasi nama tampilan aplikasi, string sumber, internal id aplikasi. 
+display_strings_app1.dart dan display_strings_app2.dart berisi sumber string. 
+Gunakan internal id aplikasi pada home_page.dart untuk membedakan assets. 
+Jalankan di terminal `flutter run --flavor app1 -t lib/main_app1.dart` atau 
+`flutter run --flavor app2 -t lib/main_app2.dart`\
+![flavor](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/flavorapp.png)
+### Development flavor
+Buat projek `flutter_flavors` dengan kode dart seperti ini []()\
+Konfigurasi `android\app\build.gradle`
+```
+flavorDimensions "flavor-type"
+    productFlavors {
+        development {
+            dimension "flavor-type"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+        }
+        production {
+            dimension "flavor-type"
+        }
+    }
+```
+`main.dart` call flavor release dan `main-dev.dart` call flavor development. 
+Pada `config.dart` mengkonfigurasi aplikasi flavor apa yang akan dipanggil (release atau development) 
+dengan String `helloMessage` berisi text dan Icon `helloIcon` berisi icon. 
+`appEntry.dart` berisi kode dart yang menampilkan UI dari aplikasi flavor dengan get data `helloMessage` dan `helloIcon`. 
+`flutter run --flavor development -t lib/main-dev.dart`\
+![]()
+`flutter run --flavor production -t lib/main.dart`\
+![]()
 
+Sumber:\
+[Creating flavors of a Flutter app](https://cogitas.net/creating-flavors-of-a-flutter-app/)

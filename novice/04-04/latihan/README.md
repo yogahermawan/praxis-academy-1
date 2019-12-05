@@ -75,7 +75,7 @@ Jalankan di terminal `flutter run --flavor app1 -t lib/main_app1.dart` atau
 `flutter run --flavor app2 -t lib/main_app2.dart`\
 ![flavor](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/flavorapp.png)
 ### Development flavor
-Buat projek `flutter_flavors` dengan kode dart seperti ini []()\
+Buat projek `flutter_flavors` dengan kode dart seperti ini [develop release flavor](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/libdevelop)\
 Konfigurasi `android\app\build.gradle`
 ```
 flavorDimensions "flavor-type"
@@ -93,11 +93,12 @@ flavorDimensions "flavor-type"
 `main.dart` call flavor release dan `main-dev.dart` call flavor development. 
 Pada `config.dart` mengkonfigurasi aplikasi flavor apa yang akan dipanggil (release atau development) 
 dengan String `helloMessage` berisi text dan Icon `helloIcon` berisi icon. 
-`appEntry.dart` berisi kode dart yang menampilkan UI dari aplikasi flavor dengan get data `helloMessage` dan `helloIcon`. 
+`appEntry.dart` berisi kode dart yang menampilkan UI dari aplikasi flavor dengan get data `helloMessage` dan `helloIcon`.\
 `flutter run --flavor development -t lib/main-dev.dart`\
-![]()
+![dev](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/development.PNG)\
 `flutter run --flavor production -t lib/main.dart`\
-![]()
+![rel](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/release.PNG)
 
 Sumber:\
-[Creating flavors of a Flutter app](https://cogitas.net/creating-flavors-of-a-flutter-app/)
+[Creating flavors of a Flutter app](https://cogitas.net/creating-flavors-of-a-flutter-app/)\
+[Flavoring FLutter](https://medium.com/@salvatoregiordanoo/flavoring-flutter-392aaa875f36)

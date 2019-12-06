@@ -16,3 +16,9 @@
 - 03-03: Mengakses Back End as a Service Menggunakan Firebase
 - 03-04: Aksesibilitas
 - 03-05: Internasionalisasi Aplikasi
+### Minggu 04
+- 04-01: Platform Specific Code di Android
+- 04-02: Paket dan Plugin
+- 04-03: Testing dan Optimasi
+- 04-04: Deployment
+- 04-05: Continuous Delivery Menggunakan Fastlane

@@ -1,7 +1,7 @@
 ### Autentikasi Google
 Gunakan AndroidX agar compatible, adalah project open source yang digunakan oleh tim Android untuk mengembangkan, menguji, mengemas, membuat versi, dan merilis library di dalam Jetpack.
 Cara buat AndroidX `flutter create --androidx sign_in_flutter`\
-Migrasi AndroidX, `Refactor Menu > Refactor/Migrate to AndroidX` hanya di Android Studio atau konfigurasi file `gradle.properties` lalu `flutter clean build` di terminal. 
+Migrasi AndroidX, `Refactor Menu > Refactor/Migrate to AndroidX` hanya di Android Studio atau konfigurasi file `gradle.properties` seperti di bawah lalu `flutter clean build` di terminal. 
 ```
 android.useAndroidX=true
 android.enableJetifier=true
@@ -18,7 +18,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 ```
 Konfigurasi firebase dengan aplikasi sehingga terhubung dan enable autentikasi google. 
-File [lib]()\
+File Kode Sumber [lib](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-03/kasus/lib_autentikasi)\
 File `main.dart` call widget `LoginPage` pada `login_page.dart`. 
 `LoginPage` memiliki `_LoginPageState` yang berisi tampilan halaman login google. 
 Di dalamnya memanggil method `signInWithGoogle` apabila button di klik, method ini berada di `sign_in.dart`. 
@@ -26,7 +26,7 @@ Method ini menjalankan perintah login ke akun google dan return profil penggunan
 Ini berisi tampilan nama bayi, Klik menu profil untuk menavigasi ke `profil.dart` yang menampilkan profil akun google. 
 Klik button sign out yang memanggil method `signOutGoogle` untuk keluar akun google saat ini. 
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/kasus/record/autentikasi.gif" width="300">
 
 ### Aplikasi Chatting
 Tambahkan flutter plugin

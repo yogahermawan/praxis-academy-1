@@ -51,16 +51,16 @@ dependencies:
   flutter_local_notifications: ^0.8.4+3
   photo_view: ^0.9.0
 ```
-Kode sumber aplikasi chatting []()\
-Tambahkan [images]() dan inisialisasi di pubspec.yaml sebagai gambar .gif pada chat.
+Kode sumber aplikasi chatting [libchat](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-03/kasus/lib_chat)\
+Tambahkan folder [images](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-03/kasus/images_gif) dan inisialisasi di pubspec.yaml sebagai gambar .gif pada chat.
 ```
 assets:
     - images/
 ```
-Tambahkan [app_icon.png]() di `android\app\src\main\res\drawable`\
-Ubah icon android seperti materi sebelumnya dengan app_icon.png\
+Tambahkan [app_icon.png](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/kasus/app_icon.png) di `android\app\src\main\res\drawable`\
+Ubah icon android seperti materi sebelumnya dengan `app_icon.png`\
 Konfigurasi firebase pada aplikasi flutter seperti sebelumnya. enable autentikasi google, cloud firestore dan storage\
-Jika error androidX compatible, pakai kotlin `ext.kotlin_version = '1.3.0'` dan build.gradle
+Jika error androidX compatible, konfigurasi build.gradle
 ```
 classpath 'com.android.tools.build:gradle:3.5.2'
 classpath 'com.google.gms:google-services:4.3.2'
@@ -69,10 +69,11 @@ Upgrade gradle pada `gradle>wrapper>gradle-wrapper.properties`
 ```
 https\://services.gradle.org/distributions/gradle-5.4.1-all.zip
 ```
+Apabila menggunakan kotlin `ext.kotlin_version = '1.3.0'`\
 Jika error `[TAG] Failed to resolve variable '${junit.version}'/'${animal.sniffer.version}'` pada android studio klik `File>Invalidate Caches/Restart` lalu `Build>Clean Project`\
 
 <video width="300" autoplay loop>
-  <source src="" type="video/mp4">
+  <source src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/kasus/record/chatting.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

@@ -5,9 +5,10 @@ Konfigurasi `build.gradle` sesuai yang dibutuhkan. Jalankan aplikasi dengan meng
 aktifkan talkback pada android untuk memberi tahu isi tampilan aplikasi.\
 ![]()\
 Contoh aplikasi [basic-android-accessibility](https://github.com/googlecodelabs/basic-android-accessibility/archive/master.zip). 
-Buka dengan android studio, pilih java/kotlin. File sumber berada di `app/java` dan seluruh file layout berada di `app/res/layout`. 
+Buka dengan android studio, pilih java/kotlin (UI sama hanya berbeda bahasa pemrogramannya). 
+File sumber berada di `app/java` dan seluruh file layout berada di `app/res/layout`. 
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/record/accessibilitylayout.gif" width="300">
 
 Aktifkan Talkback, `Setelan>Aksesibilitas>Talkback>switch on`. 
 Tutorial talkback dapat dicoba seperti gambar berikut pada `setelan talkback>tutorial talkback`:\

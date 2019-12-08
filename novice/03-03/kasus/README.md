@@ -72,11 +72,14 @@ https\://services.gradle.org/distributions/gradle-5.4.1-all.zip
 Apabila menggunakan kotlin `ext.kotlin_version = '1.3.0'`\
 Jika error `[TAG] Failed to resolve variable '${junit.version}'/'${animal.sniffer.version}'` pada android studio klik `File>Invalidate Caches/Restart` lalu `Build>Clean Project`
 
-<video width="300" autoplay loop>
-  <source src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/kasus/record/chatting.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/kasus/record/chatting.gif" width="300">
 
+Widget MyApp pada `login.dart` berisi widget LoginScreen dengan LoginScreenState yang menampilkan halaman login google. 
+Method `handleSignIn` menjalankan fungsi autentikasi google dan membuat collection users. Method `isSignedIn` memverifikasi apakah user sudah login atau belum. 
+Setelah login, menavigasi ke widget MainScreen dengan MainScreenState di `main.dart` yang berisi tampilan ListView chat dari buildItem. 
+Klik buildItem menavigasi ke widget Chat di `chat.dart` yang memanggil widget ChatScreen dengan ChatScreenState yang berisi tampilan chatting. 
+Method `onSendMessage` untuk mengirim pesan baru. Method `getImage` mengambil gambar dari galeri kemudian panggil method `uploadFile` untuk upload file ke storage firebase dan mendapatkan url gambarnya. 
+Widget `FullPhoto` memanggil FullPhotoScreen dengan FullPhotoScreenState untuk menampilkan gambar secara fullscreen. 
 Aplikasi ini akan membuat collection users di cloud firestore setelah login akun google yang berisi profile, chat dengan siapa, dll. 
 Dan juga membuat collection messages yang berisi data pesan chat. Storage berisi upload gambar dari chat. 
 

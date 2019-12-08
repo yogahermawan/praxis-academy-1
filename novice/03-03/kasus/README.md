@@ -77,12 +77,14 @@ Jika error `[TAG] Failed to resolve variable '${junit.version}'/'${animal.sniffe
 Widget MyApp pada `login.dart` berisi widget LoginScreen dengan LoginScreenState yang menampilkan halaman login google. 
 Method `handleSignIn` menjalankan fungsi autentikasi google dan membuat collection users. Method `isSignedIn` memverifikasi apakah user sudah login atau belum. 
 Setelah login, menavigasi ke widget MainScreen dengan MainScreenState di `main.dart` yang berisi tampilan ListView chat dari buildItem. 
+Button back pada MainScreen, memanggil method `openDialog` memunculkan pop up dialog untuk keluar aplikasi atau tidak. 
 Klik buildItem menavigasi ke widget Chat di `chat.dart` yang memanggil widget ChatScreen dengan ChatScreenState yang berisi tampilan chatting. 
-Method `onSendMessage` untuk mengirim pesan baru. Method `getImage` mengambil gambar dari galeri kemudian panggil method `uploadFile` untuk upload file ke storage firebase dan mendapatkan url gambarnya. 
-Widget `FullPhoto` memanggil FullPhotoScreen dengan FullPhotoScreenState untuk menampilkan gambar secara fullscreen. 
-Aplikasi ini akan membuat collection users di cloud firestore setelah login akun google yang berisi profile, chat dengan siapa, dll. 
-Dan juga membuat collection messages yang berisi data pesan chat. Storage berisi upload gambar dari chat. 
-
+Method `onSendMessage` untuk mengirim pesan baru. Method `getImage` mengambil gambar dari galeri kemudian panggil method `uploadFile` untuk upload file 
+ke storage firebase dan mendapatkan url gambarnya. Method `getSticker` untuk menampilkan stiker gif chat. 
+Widget `FullPhoto` di `fullPhoto.dart` memanggil FullPhotoScreen dengan FullPhotoScreenState untuk menampilkan gambar secara fullscreen. 
+Method `handleSignOut` untuk keluar akun google. Widget `Settings` di `settings.dart` memanggil SettingsScreen dengan SettingsScreenState untuk 
+menampilkan profil penggunanya. `const.dart` berisi resource warna. Aplikasi ini akan membuat collection users di cloud firestore setelah login akun google 
+yang berisi profile, chat dengan siapa, dll. Dan juga membuat collection messages yang berisi data pesan chat. Storage berisi upload gambar dari chat. 
 
 Sumber:\
 [AndroidX](https://developer.android.com/jetpack/androidx?hl=id)\

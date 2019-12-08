@@ -70,7 +70,7 @@ Upgrade gradle pada `gradle>wrapper>gradle-wrapper.properties`
 https\://services.gradle.org/distributions/gradle-5.4.1-all.zip
 ```
 Apabila menggunakan kotlin `ext.kotlin_version = '1.3.0'`\
-Jika error `[TAG] Failed to resolve variable '${junit.version}'/'${animal.sniffer.version}'` pada android studio klik `File>Invalidate Caches/Restart` lalu `Build>Clean Project`\
+Jika error `[TAG] Failed to resolve variable '${junit.version}'/'${animal.sniffer.version}'` pada android studio klik `File>Invalidate Caches/Restart` lalu `Build>Clean Project`
 
 <video width="300" autoplay loop>
   <source src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-03/kasus/record/chatting.mp4" type="video/mp4">

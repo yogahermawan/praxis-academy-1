@@ -3,7 +3,7 @@ Desain perangkat yang dapat digunakan oleh penyandang disabilitas. Berikut aplik
 Contoh aplikasi [android-BasicAccessibility](https://github.com/googlearchive/android-BasicAccessibility). 
 Konfigurasi `build.gradle` sesuai yang dibutuhkan. Jalankan aplikasi dengan menggunakan android studio dan 
 aktifkan talkback pada android untuk memberi tahu isi tampilan aplikasi.\
-![]()\
+![basicaccessibility](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/images/basicaccessibility.png)\
 Contoh aplikasi [basic-android-accessibility](https://github.com/googlecodelabs/basic-android-accessibility/archive/master.zip). 
 Buka dengan android studio, pilih java/kotlin (UI sama hanya berbeda bahasa pemrogramannya). 
 File sumber berada di `app/java` dan seluruh file layout berada di `app/res/layout`. 

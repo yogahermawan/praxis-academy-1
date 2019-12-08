@@ -23,7 +23,7 @@ Menggunakan talkback, klik sekali untuk mendeskripsikan item dan klik dua kali u
 Untuk menggeser layar/scroll menggunakan dua jari. Coba menggunakan talkback pada aplikasi yang telah dijalankan tadi. 
 Tool layout bound, untuk mengetahui lebar item pada aplikasi. Aktifkan dengan `Setelan>Sistem>Opsi developer>Tampilkan batas tata letak>switch on`.
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/images/layoutbound.png" width="300">
 
 Menggunakan Accessibility Scanner, fitur ini menyarankan peningkatan aksesibilitas untuk aplikasi Android seperti memperbesar target sentuhan kecil, 
 meningkatkan kontras, dan memberikan deskripsi konten. Aktifkan pada `Setelan>Aksesibilitas>Accessibility Scanner>switch on`. 

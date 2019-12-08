@@ -120,9 +120,9 @@ Jalankan aplikasi `Run>Edit Configurations`, ubah opsi Launch dari Default Activ
 Sehingga sebagai service tidak memerlukan activity pada AndroidManifest untuk membuat main dan launcher aplikasi. 
 Buka `Setelan>Aksesibilitas>Global Action Bar Service>switch on`
 
-<img src="" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/images/serviceglobalaction.png" width="300">
 
-File [action_bar.xml]() digunakan untuk membuat tombol. Tambahkan kode berikut pada GlobalActionBarService,
+File [action_bar.xml](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/action_bar.xml) digunakan untuk membuat tombol. Tambahkan kode berikut pada GlobalActionBarService,
 ```
 FrameLayout mLayout;
 
@@ -144,7 +144,10 @@ protected void onServiceConnected() {
 }
 ```
 `onServiceConnected()` berjalan saat service terhubung. `WindowManager.LayoutParams.TYPE_ACCESSIBILITY_OVERLAY` 
-sebagai izin layout untuk berada di atas layar.\
+sebagai izin layout untuk berada di atas layar.
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/images/button.png" width="300">
+
 Konfigurasi tombol power,
 ```
 private void configurePowerButton() {
@@ -158,7 +161,10 @@ private void configurePowerButton() {
 }
 ```
 configurePowerButton menggunakan method performGlobalAction yang memicu onClickListener untuk menampilkan dialog power android. 
-Tombol back, home, recent termasuk global actions.\
+Tombol back, home, recent termasuk global actions.
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/images/power.png" width="100">
+
 Konfigurasi tombol volume,
 ```
 private void configureVolumeButton() {
@@ -174,7 +180,10 @@ private void configureVolumeButton() {
 }
 ```
 configureVolumeButton memicu onClickListener untuk meningkatkan volume android menggunakan 
-AudioManager untuk menyesuaikan aliran volumenya.\
+AudioManager untuk menyesuaikan aliran volumenya.
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/images/volume.png" width="70">
+
 Konfigurasi tombol scroll, Metode pertama menemukan scrollable node
 ```
 private AccessibilityNodeInfo findScrollableNode(AccessibilityNodeInfo root) {
@@ -208,7 +217,10 @@ private void configureScrollButton() {
 }
 ```
 configureScrollButton memicu onClickListener untuk melakukan scroll ke bawah dengan menggunakan 
-findScrollableNode yang mencari scrollable node atau tampilan yang dapat di scroll.\
+findScrollableNode yang mencari scrollable node atau tampilan yang dapat di scroll.
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/record/scroll.gif" width="300">
+
 Konfigurasi tombol swipe,
 ```
 private void configureSwipeButton() {
@@ -227,6 +239,10 @@ private void configureSwipeButton() {
 }
 ```
 configureSwipeButton menggunakan GestureDescription untuk menentukan jalur gerakan yang akan dilakukan lalu swipe ke kanan. 
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/record/swipe.gif" width="300">
+
+Kode sumber [GlobalActionBarService.java](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/latihan/GlobalActionBarService.java)
 
 Sumber:\
 [Codelabs Accessibility](https://codelabs.developers.google.com/codelabs/basic-android-accessibility/#0)\

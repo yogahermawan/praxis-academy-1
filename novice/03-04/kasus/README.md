@@ -1,10 +1,17 @@
 ### Aksesibilatas Scanner
-1. Aplikasi [Baby Name](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-03/latihan)
+1. Aplikasi [Baby Names](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-03/latihan)
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/babynames.png" width="250">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/sugestsucces.png" width="250">
 
 Di aplikasi ini tidak ada sugesti atau tampilan yang harus diperbaiki.
+
 2. Aplikasi [Weather Business Logic Component](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan)
 
-label text, text contrast
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/weather.png" width="250">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/weathercity.png" width="250">
+
+Terdapat saran memperbaiki label text dan text contrast. Tambahkan label text dan ganti warna pada text input maupun border.
 ```
 decoration: InputDecoration(
   hintText: "Enter a city",
@@ -24,9 +31,11 @@ decoration: InputDecoration(
   ),
 ),
 ```
-
 3. Aplikasi [Navigasi layar baru dan kembali](https://github.com/Fourthten/praxis-academy/tree/master/novice/02-03/latihan)
 
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/navigator.png" width="250">
+
+Terdapat saran memperbaiki text contrast. Perbaiki dengan ganti warna icon,
 ```
 appBar: AppBar(
 	iconTheme: IconThemeData(
@@ -35,9 +44,11 @@ appBar: AppBar(
 	title: Text("Second Route"),
 ),
 ```
-
 4. Aplikasi [Provider Counter](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan)
 
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/floatingbutton.png" width="250">
+
+Terdapat saran memperbaiki text contrast. Perbaiki dengan ganti warna icon,
 ```
 child: new IconTheme(
 	data: new IconThemeData(

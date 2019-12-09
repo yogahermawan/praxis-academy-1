@@ -1,21 +1,13 @@
 ### Aksesibilatas Scanner
 1. Aplikasi [Baby Names](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-03/latihan)
 
-<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/babynames.png" width="250">
-<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/sugestsucces.png" width="250">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/babynames.png" width="500">
 
 Di aplikasi ini tidak ada sugesti atau tampilan yang harus diperbaiki.
 
-2. Aplikasi [Weather Business Logic Component](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan)
+1. Aplikasi [Weather Business Logic Component](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan)
 
-<div style="width: 70%">
-  <div style="float: left; width: 35%; padding: 5px;">
-    <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/weather.png" width="250">
-  </div>
-  <div style="float: left; width: 35%; padding: 5px;">
-    <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/weathercity.png" width="250">
-  </div>
-</div>
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/weather.png" width="500">
 
 Terdapat saran memperbaiki item label dan text contrast. Tambahkan label text dan ganti warna pada text input maupun border.
 ```
@@ -37,7 +29,7 @@ decoration: InputDecoration(
   ),
 ),
 ```
-3. Aplikasi [Navigasi layar baru dan kembali](https://github.com/Fourthten/praxis-academy/tree/master/novice/02-03/latihan)
+1. Aplikasi [Navigasi layar baru dan kembali](https://github.com/Fourthten/praxis-academy/tree/master/novice/02-03/latihan)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/navigator.png" width="250">
 

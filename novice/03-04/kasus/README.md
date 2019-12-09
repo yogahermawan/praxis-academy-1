@@ -5,7 +5,7 @@
 
 Di aplikasi ini tidak ada sugesti atau tampilan yang harus diperbaiki.
 
-1. Aplikasi [Weather Business Logic Component](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan)
+2. Aplikasi [Weather Business Logic Component](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-01/latihan)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/weather.png" width="500">
 
@@ -29,7 +29,7 @@ decoration: InputDecoration(
   ),
 ),
 ```
-1. Aplikasi [Navigasi layar baru dan kembali](https://github.com/Fourthten/praxis-academy/tree/master/novice/02-03/latihan)
+3. Aplikasi [Navigasi layar baru dan kembali](https://github.com/Fourthten/praxis-academy/tree/master/novice/02-03/latihan)
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-04/kasus/images/navigator.png" width="250">
 

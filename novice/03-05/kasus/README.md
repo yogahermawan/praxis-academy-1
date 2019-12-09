@@ -11,8 +11,16 @@ assets:
     - assets/languages/id.json
     - assets/languages/en.json
 ```
+Tambahkan flutter_localizations
+```
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+```
 Widget MyApp dengan MyAppState memiliki widget AppBody yang berisi tampilan aplikasi. 
 Method `onChangeLanguage` untuk mengubah bahasa aplikasi. 
 Method `initialize()` memiliki `loadJsonFromAsset()` dan `convertValueToString()` untuk mendeklarasi bahasa dari file json. 
-MyLocalizationsDelegate sebagai inheritance dari MyLocalizations. 
+MyLocalizationsDelegate sebagai inheritance dari MyLocalizations yang menginisialisasi localizedValues. 
 `MyLocalizations.of(context)` untuk mendapatkan data bahasa dan mengubahnya pada tampilan.

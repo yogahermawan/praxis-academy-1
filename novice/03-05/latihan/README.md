@@ -47,7 +47,7 @@ DemoLocalizations.of(context) untuk menyesuaikan text sesuai bahasa yang dipakai
 DemoLocalizationsDelegate sebagai turunan dari DemoLocalizations yang menginisialisasi bahasa sistem.\
 ![Internasionalisasi](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-05/latihan/images/internationalis.PNG)
 ### Internasionalisasi dengan Application Resource Bundle (ARB)
-Adalah format lokalisasi sumber daya yang sederhana (json), dapat dikembangkan dan langsung dapat digunakan. Berisi JSON dari resource ID ke localized values. 
+ARB adalah format lokalisasi sumber daya yang sederhana (json), dapat dikembangkan dan langsung dapat digunakan. Berisi JSON dari resource ID ke localized values. 
 Tambahkan dependencies
 ```
 dependencies:
@@ -58,13 +58,13 @@ dependencies:
 dev_dependencies:  
   intl_translation: ^0.17.7
 ```
-[Kode Sumber]()
+[Kode Sumber](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-05/latihan/arb_internasionalis)\
 Buat localizations.dart, class AppLocalizations memiliki beberapa fungsi:\
 fungsi load akan memuat sumber daya string dari Lokal yang diinginkan seperti di parameter.\
 fungsi of akan menjadi penolong InheritedWidget lainnya untuk memfasilitasi akses ke string dari kode aplikasi.\
 fungsi get akan mencantumkan sumber daya yang tersedia diterjemahkan ke aplikasi, Intl.message akan membuat alat intl mencari kelas dan mengisi inisialisasi pesan yang diterjemahkan.\
 method initializeMessages akan dihasilkan oleh alat intl, impor "l10n / messages_all.dart" berisi metode yang secara efektif memuat pesan yang diterjemahkan.
-AppLocalizations digunakan untuk merangkum sumber daya dan AppLocalizationsDelegate untuk menyediakan sumber daya.\
+`AppLocalizations` digunakan untuk merangkum sumber daya dan `AppLocalizationsDelegate` untuk menyediakan sumber daya.\
 Jalankan di terminal
 ```
 flutter pub pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/localizations.dart
@@ -76,10 +76,12 @@ flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/l10n --g
 ```
 ini akan generate file intl_messages_all.dart, intl_messages_en.dart, intl_messages_es.dart, intl_messages_pt.dart\
 Buat main.dart, ini membuat localizationsDelegates dan supportedLocales. MyApp memanggil MyHomePage yang berisi tampilan aplikasi. 
-`AppLocalizations.of(context)` digunakan sebagai penerjemah text. 
-![]()
+`AppLocalizations.of(context)` digunakan sebagai penerjemah text.\
+![arb](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-05/latihan/images/arb_internasionalis.PNG)
 
 Sumber:\
+[Flutter Localization the Easy Way](https://resocoder.com/2019/06/01/flutter-localization-the-easy-way-internationalization-with-json/)\
+[Make an Flutter application multi-lingual](https://www.didierboelens.com/2018/04/internationalization---make-an-flutter-application-multi-lingual/)\
 [Flutter Internationalization Tutorials](https://medium.com/@datvt9312/flutter-internationalization-tutorials-d8f0f711e7f)\
 [Flutter — Localization: step by step](https://proandroiddev.com/flutter-localization-step-by-step-30f95d06018d)\
 [Github Internationalization](https://github.com/anilcancakir/flutter-internationalization)

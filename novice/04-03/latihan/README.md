@@ -42,7 +42,7 @@ buat projek, tambahkan dependencies
 dev_dependencies:
   test: ^1.6.3
 ```
-buat file, [kode sumber]()
+buat file, [unit test](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-03/latihan/unittest)
 ```
 counter_app/
   lib/
@@ -65,7 +65,7 @@ WidgetTester memungkinkan pembuatan dan interaksi dengan widget.
 testWidgets() membuat WidgetTester baru untuk setiap kasus uji dan sebagai pengganti fungsi tes normal. 
 Finder memungkinkan pencarian widget. 
 Konstanta Widget-specific Matcher membantu memverifikasi apakah Finder menemukan widget.\
-jalankan []() `flutter test lib/main.dart`
+jalankan [widget_test](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-03/latihan/widgettest.dart) `flutter test lib/main.dart`
 ```
 00:04 +1: All tests passed!
 ```
@@ -80,7 +80,7 @@ dev_dependencies:
     sdk: flutter
   test: ^1.6.3
 ```
-Buat file []()
+Buat file [integration_test](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-03/latihan/integrationtest)
 ```
 counter_app/
   lib/
@@ -96,6 +96,38 @@ Jalankan di terminal `flutter drive --target=test_driver/app.dart`
 00:05 +1: Counter App increments the counter
 00:06 +2: Counter App (tearDownAll)
 00:06 +2: All tests passed!
+```
+### Logging
+Bisa dengan stdout dan stderr
+```
+stderr.writeln('print me');
+```
+Atau dengan dart:developer log()
+```
+import 'dart:convert';
+import 'dart:developer' as developer;
+void main() {
+  var myCustomObject = ...;
+  developer.log(
+    'log me',
+    name: 'my.app.category',
+    error: jsonEncode(myCustomObject),
+  );
+  developer.log('log me', name: 'my.app.category');
+}
+```
+Setting breakpoints dengan debugger
+```
+import 'dart:developer';
+void someFunction(double offset) {
+  debugger(when: offset > 30.0);
+}
+```
+Debug flag memunculkan widget tree menggunakan debugDumpApp(), debugDumpRenderTree(), debugDumpLayerTree(), debugDumpSemanticsTree(), dll.
+```
+onPressed: () {
+  debugDumpApp();
+},
 ```
 
 Sumber:\

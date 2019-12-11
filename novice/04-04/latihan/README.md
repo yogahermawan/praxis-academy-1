@@ -10,7 +10,7 @@ dependencies:
     sdk: flutter
   intl: ^0.15.7
 ```
-Tambahkan [images](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/imageflavor) di folder `assets\`\
+Tambahkan [images](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/imageflavor) di folder `assets`\
 Konfigurasi flavor di `android\app\build.gradle`
 ```
     defaultConfig { ... }

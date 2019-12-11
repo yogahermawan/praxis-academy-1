@@ -1,104 +1,63 @@
-### Membuat Flavors Android
-Produk flavor mirip dengan build type, dengan flavor dapat menentukan konfigurasi build dan mengubahnya sesuai keinginan. 
-Dengan flavor dapat membuat beberapa aplikasi dengan sumber kode yang sama namun berbeda konfigurasi. Contoh flavor,\
-Buat projek flutter `flutter create flavorsexample`\
-Buat aplikasi seperti kode dart berikut: [FlutterApp](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/libfluterflavor)\
-Install flutter package
+### Deployment
+Tambahkan launcher icon, pada AndroidManifest.xml
 ```
-dependencies:
-  flutter:
-    sdk: flutter
-  intl: ^0.15.7
+<application android:icon="@mipmap/ic_launcher" ....>
 ```
-Tambahkan [images](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/imageflavor) di folder `assets\`\
-Konfigurasi flavor di `android\app\build.gradle`
+Nama aplikasi
 ```
-    defaultConfig { ... }
-    flavorDimensions "app"
-    productFlavors {
-        app1 {
-            dimension "app"
-            applicationId "com.example.flavorsexample.app1"
-            versionCode 1
-            versionName "1.0"
-        }
-        app2 {
-            dimension "app"
-            applicationId "com.example.flavorsexample.app2"
-            versionCode 1
-            versionName "1.0"
-        }
-    }
-    buildTypes { ... }
+<application android:label="localization" ....>
 ```
-Konfigurasi `AndroidManifest`
+Permission jika dibutuhkan
 ```
-<application
-    android:name="io.flutter.app.FlutterApplication"
-    android:label="@string/app_name"
-    android:icon="@mipmap/ic_launcher">
+<manifest ...>
+....
+<uses-permission android:name="android.permission.INTERNET" />
+....
+<application ...>
 ```
-Tambahkan file strings.xml di `android/app/src/main/res/values`
+Untuk publish ke playstore buat keystore release jika belum punya
 ```
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Default App Name</string>
-</resources>
+keytool -genkey -v -keystore c:/Users/USER_NAME/key.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias key
 ```
-Tambahkan file strings.xml di `android/app/src/app1/res/values`
+![]()\
+keystore aktif selama 10000 hari, kode diatas akan generate file key.jks\
+Buat file `android\key.properties`
 ```
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">App 1</string>
-</resources>
+storePassword=<password from previous step>
+keyPassword=<password from previous step>
+keyAlias=key
+storeFile=C:\\Users\\UserName\\key.jks
 ```
-Tambahkan file strings.xml di `android/app/src/app2/res/values`
-```
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">App 2</string>
-</resources>
-```
-Jalankan `flutter run --flavor app1` atau `flutter run --flavor app2`. `flutter clean` untuk membersihkan cache.\
-![app](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/app1.PNG)\
-Tambahkan Flavors, buat main_common, main_app1, main_app2 untuk membedakan aplikasi. Kode seperti ini [flavorapp](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/libflavor)\
-app_config.dart untuk mengkonfigurasi nama tampilan aplikasi dan internal id aplikasi. 
-home_page.dart untuk menampilkan UI aplikasi. 
-Jalankan di terminal `flutter run --flavor app1 -t lib/main_app1.dart` atau 
-`flutter run --flavor app2 -t lib/main_app2.dart`\
-![flavor](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/flavorapp2.PNG)\
-Custom beberapa sumber string dan assets pada flavor, Contoh file [customflavor](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/libcustom)\
-app_config.dart untuk mengkonfigurasi nama tampilan aplikasi, string sumber, internal id aplikasi. 
-display_strings_app1.dart dan display_strings_app2.dart berisi sumber string. 
-Gunakan internal id aplikasi pada home_page.dart untuk membedakan assets. 
-Jalankan di terminal `flutter run --flavor app1 -t lib/main_app1.dart` atau 
-`flutter run --flavor app2 -t lib/main_app2.dart`\
-![flavor](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/flavorapp.png)
-### Development flavor
-Buat projek `flutter_flavors` dengan kode dart seperti ini [develop release flavor](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-04/latihan/libdevelop)\
 Konfigurasi `android\app\build.gradle`
 ```
-flavorDimensions "flavor-type"
-    productFlavors {
-        development {
-            dimension "flavor-type"
-            applicationIdSuffix ".dev"
-            versionNameSuffix "-dev"
-        }
-        production {
-            dimension "flavor-type"
-        }
+// tambahkan di atas android {
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+// tambahkan di atas buildTypes {
+signingConfigs {
+    release {
+        keyAlias keystoreProperties['keyAlias']
+        keyPassword keystoreProperties['keyPassword']
+        storeFile file(keystoreProperties['storeFile'])
+        storePassword keystoreProperties['storePassword']
     }
+}
+
+// replace signingConfig signingConfigs.build
+signingConfig signingConfigs.release
 ```
-`main.dart` call flavor release dan `main-dev.dart` call flavor development. 
-Pada `config.dart` mengkonfigurasi aplikasi flavor apa yang akan dipanggil (release atau development) 
-dengan String `helloMessage` berisi text dan Icon `helloIcon` berisi icon. 
-`appEntry.dart` berisi kode dart yang menampilkan UI dari aplikasi flavor dengan get data `helloMessage` dan `helloIcon`.\
-`flutter run --flavor development -t lib/main-dev.dart`\
-![dev](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/development.PNG)\
-`flutter run --flavor production -t lib/main.dart`\
-![rel](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-04/latihan/images/release.PNG)
+Cek applicationId, versionCode, versionName, minSdkVersion, targetSdkVersion sudah sesuai atau belum\
+Bundle menggunakan bundletool untuk membuat set APK yang dapat di ekstrak dengan base dan konfigurasi terpisah. 
+Bundle berformat penerbitan, APK berformat packaging untuk di install di perangkat.\
+Membuat bundle `flutter build appbundle`, lokasi di `build/app/outputs/bundle/release/app.aab`\
+Membuat APK `flutter build apk --release`, lokasi di `build/app/outputs/apk/release/app.apk`. 
+dengan `flutter build apk --split-per-abi` menghasilkan apk yang tidak gemuk yang berisi kode untuk semua ABI target.\
+Install di perangkat langsung, `flutter install`\
+di Android Studio, klik `gradle/build.gradle(Module: app)` pilih menu `build>select build variant` pada `active build variant` pilih `release`
 
 Sumber:\
-[Creating flavors of a Flutter app](https://cogitas.net/creating-flavors-of-a-flutter-app/)\
-[Flavoring FLutter](https://medium.com/@salvatoregiordanoo/flavoring-flutter-392aaa875f36)
+[Deployment](https://flutter.dev/docs/deployment/android)

@@ -101,4 +101,5 @@ dengan String `helloMessage` berisi text dan Icon `helloIcon` berisi icon.
 
 Sumber:\
 [Creating flavors of a Flutter app](https://cogitas.net/creating-flavors-of-a-flutter-app/)\
-[Flavoring FLutter](https://medium.com/@salvatoregiordanoo/flavoring-flutter-392aaa875f36)
+[Flavoring FLutter](https://medium.com/@salvatoregiordanoo/flavoring-flutter-392aaa875f36)\
+[Ready to Go](https://medium.com/flutter-community/flutter-ready-to-go-e59873f9d7de)

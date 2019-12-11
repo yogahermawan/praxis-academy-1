@@ -37,7 +37,7 @@ class _AppBodyState extends State<AppBody> {
 }
 ```
 
-<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/04-03/kasus/images/after.png" width="300">
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/04-03/kasus/images/afters.png" width="300">
 
 Sumber:\
 [Profiling](https://flutter.dev/docs/perf/rendering/ui-performance)\

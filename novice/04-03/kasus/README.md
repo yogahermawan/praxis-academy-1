@@ -3,8 +3,10 @@ Koneksi physical device, Jalankan dengan mode profil `flutter run --track-widget
 Mode profil tidak bisa dijalankan di emulator dan simulator. Jalankan DevTools di terminal `flutter pub global run devtools`. 
 Buka DevTools di browser Google Chrome dengan `http://localhost:9100` lalu masukkan port url aplikasinya. 
 Testing ini menggunakan aplikasi [Internasionalisasi pendekatan JSON app](https://github.com/Fourthten/praxis-academy/tree/master/novice/03-05/latihan). 
-UI mengeksekusi kode Dart di Dart VM. GPU mengeksekusi kode grafis dari Flutter Engine. Jika frame merender di bawah 16ms maka tidak perlu khawatir dengan performa.\
-![localeold](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-03/kasus/images/before.png)\
+UI mengeksekusi kode Dart di Dart VM. GPU mengeksekusi kode grafis dari Flutter Engine. Jika frame merender di bawah 16ms maka tidak perlu khawatir dengan performa.
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/04-03/kasus/images/before.png" width="300">
+
 Untuk meningkatkan performa, sebagai contoh mengubah stateless widget menjadi stateful widget. tambahkan label dan atur contrast pada floatingActionButton sebagai saran aksesibilitas scanner.
 ```
 class AppBody extends StatefulWidget {
@@ -34,7 +36,8 @@ class _AppBodyState extends State<AppBody> {
   }
 }
 ```
-![localenew](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-03/kasus/images/after.png)
+
+<img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/04-03/kasus/images/after.png" width="300">
 
 Sumber:\
 [Profiling](https://flutter.dev/docs/perf/rendering/ui-performance)\

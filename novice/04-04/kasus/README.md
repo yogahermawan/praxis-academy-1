@@ -61,9 +61,9 @@ Bundle menggunakan bundletool untuk membuat set APK yang dapat di ekstrak dengan
 Bundle berformat penerbitan, APK berformat packaging untuk di install di perangkat.\
 Membuat bundle `flutter build appbundle`, lokasi di `build/app/outputs/bundle/release/app.aab`\
 Membuat APK `flutter build apk --release`, lokasi di `build/app/outputs/apk/release/app.apk`. 
-dengan `flutter build apk --split-per-abi` menghasilkan apk yang tidak gemuk yang berisi kode untuk semua ABI target.\
+dengan `flutter build apk --split-per-abi` menghasilkan apk yang tidak gemuk yang berisi kode tidak untuk semua ABI target.\
 Install di perangkat langsung, `flutter install`\
-di Android Studio, klik `gradle/build.gradle(Module: app)` pilih menu `build>select build variant` pada `active build variant` pilih `release`\
+di Android Studio, klik `gradle/build.gradle(Module: app)` pilih menu `build>select build variant` pada `active build variant` pilih `release`
 
 Sumber:\
 [Deployment](https://flutter.dev/docs/deployment/android)

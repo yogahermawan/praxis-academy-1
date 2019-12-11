@@ -15,4 +15,3 @@ Fastfile mendefinisikan "lanes" sebagai drive perilaku fastlane. Setelah konfigu
 Sumber:\
 [Setup Fastlane](https://docs.fastlane.tools/)\
 [Continuous delivery with Flutter](https://flutter.dev/docs/deployment/cd)
-

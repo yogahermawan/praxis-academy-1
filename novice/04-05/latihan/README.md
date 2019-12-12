@@ -1,3 +1,4 @@
+### Fastlane untuk CD
 Continous delivery merupakan pendekatan rekayasa perangkat lunak di mana tim memproduksi perangkat lunak dalam siklus singkat, 
 memastikan bahwa perangkat lunak dapat dirilis setiap saat dan dapat melakukannya secara manual. 
 Ini bertujuan untuk membangun, menguji, dan merilis perangkat lunak dengan kecepatan dan frekuensi yang lebih besar. 

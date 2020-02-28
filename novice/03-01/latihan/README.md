@@ -99,6 +99,24 @@ Di dalamnya berisi BlocBuilder untuk membangun kembali widget ketika state di pa
 
 <img src="https://github.com/Fourthten/praxis-academy/blob/master/novice/03-01/latihan/record/weather.gif" width="300">
 
+[State Management](https://flutter.dev/docs/development/data-and-backend/state-mgmt/intro)\
+State itu merupakan kondisi-kondisi yang akan dialami oleh aplikasi yang kita buat ketika melakukan suatu pekerjaan.
+Dimana data yang ada dapat didefinisikan dan dipusatkan pada sebuah file sehingga bisa digunakan oleh semua component yang ada agar dapat saling bertukar data dengan mengakses state yang telah didefinisikan.
+
+Deklaratif Imperatif, [read1](https://flutter.dev/docs/get-started/flutter-for/declarative), 
+[read2](https://medium.com/@masbe/pemrograman-declarative-vs-pemrograman-imperative-c41bb7e03112)\
+[Ephemeral, App State](https://flutter.dev/docs/development/data-and-backend/state-mgmt/ephemeral-vs-app)\
+Ephemeral - Bertahan selama beberapa detik seperti keadaan animasi saat ini atau satu halaman seperti peringkat produk saat ini. Flutter mendukungnya melalui StatefulWidget. 
+[read](https://www.tutorialspoint.com/flutter/flutter_ephemeral_state_management.htm)\
+App state - Terakhir untuk seluruh aplikasi seperti rincian pengguna yang masuk, informasi keranjang, dll., Flutter mendukungnya melalui scoped_model. [read](https://www.tutorialspoint.com/flutter/flutter_application_state.htm)\
+[List SM](https://flutter.dev/docs/development/data-and-backend/state-mgmt/options)
+
+[Bloc](https://medium.com/learnfazz/bloc-pattern-pada-flutter-a13523af8484), seperti arsitektur. 
+Provider adalah Widget yang akan memiliki data dan akan tersedia di mana saja di aplikasi Anda dengan BuildContext. Ini adalah tempat di mana Anda dapat «menyimpan» (misalnya informasi pengguna yang diautentikasi) dan mendapatkannya di Widget apa pun tanpa membuat panggilan API lain atau apa pun.
+ChangeNotifier digunakan untuk memberi tahu View kami ketika satu atau lebih variabel berubah dalam ViewModel-nya. 
+[raed1](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple), 
+[read2](https://medium.com/@dafinrs/pragmatic-state-dan-provider-d24fd3bf746a).
+
 Sumber:\
 [Provider](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple)\
 [BLoC](https://resocoder.com/2019/06/12/bloc-library-updated-painless-state-management-for-flutter/)

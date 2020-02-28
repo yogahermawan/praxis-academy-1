@@ -74,5 +74,10 @@ Future<List<Photo>> fetchPhotos(http.Client client) async {
 File [photojson.dart](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-02/latihan/photojson.dart)\
 ![photo](https://github.com/Fourthten/praxis-academy/blob/master/novice/03-02/latihan/images/photojson.PNG)
 
+Serialisasi adalah proses mengubah objek menjadi JSON. Sedangkan deserialisasi adalah proses mengubah JSON menjadi objek. 
+[read1](https://flutter.dev/docs/development/data-and-backend/json), 
+[read2](https://flutter.institute/simple-json-with-flutter/), 
+[read3](https://pub.dev/packages/json_serializable#-example-tab-)
+
 Sumber:\
 [Parse JSON in the background](https://flutter.dev/docs/cookbook/networking/background-parsing)

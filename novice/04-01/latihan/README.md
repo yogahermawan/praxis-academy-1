@@ -138,6 +138,9 @@ new MethodChannel(getFlutterView(), CHANNEL).setMethodCallHandler(
 File [nativedart](https://github.com/Fourthten/praxis-academy/tree/master/novice/04-01/latihan/nativedart)\
 ![nativedart](https://github.com/Fourthten/praxis-academy/blob/master/novice/04-01/latihan/images/nativedart.PNG)
 
+Platform Channel, [read1](https://stackoverflow.com/questions/56170451/what-is-the-difference-between-methodchannel-eventchannel-basicmessagechannel), 
+[read2](https://fluttertutorial.in/method-channel-in-flutter/).
+
 Sumber:\
 [Writing custom platform-specific code](https://flutter.dev/docs/development/platform-integration/platform-channels)\
 [Platform Channel in Flutter between Dart and Native Code](https://medium.com/47billion/creating-a-bridge-in-flutter-between-dart-and-native-code-in-java-or-objectivec-5f80fd0cd713)
